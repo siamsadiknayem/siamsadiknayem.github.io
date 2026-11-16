@@ -33,6 +33,6 @@
     if (e.key === 'Escape' && !panel.hidden) { close(); btn.focus(); }
   });
   document.addEventListener('click', function (e) {
-    if (!panel.hidden && !panel.contains(e.target) && e.target !== btn) close();
+    if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) close();
   });
 })();

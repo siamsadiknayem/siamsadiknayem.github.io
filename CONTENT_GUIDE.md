@@ -489,7 +489,7 @@ Google finds new sites by itself, but slowly (days to weeks). To speed it up:
 
 ## 20. Colour themes and dark mode
 
-Visitors can click **Display** in the top menu to choose a colour theme (Crimson, Navy or Forest) and Light, Dark or Auto (follows their device). Their choice is remembered in their own browser; it does not change what other visitors see. New visitors get Crimson + Auto.
+Visitors can click the **gear** on the right edge of the screen (it stays in place while scrolling) to choose a colour theme (Crimson, Navy or Forest) and Light, Dark or Auto (follows their device). Their choice is remembered in their own browser; it does not change what other visitors see. New visitors get Crimson + Auto.
 
-- **Rename the options or the button:** edit `content/_data/themes.yml`.
+- **Rename the options or the gear's hover label:** edit `content/_data/themes.yml`.
 - **Change a theme's colour:** in `assets/css/main.css`, edit the `--accent-light` (used on white) and `--accent-dark` (used in dark mode) values for that theme, and the matching `.swatch--<name>` dot.

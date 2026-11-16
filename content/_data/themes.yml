@@ -1,6 +1,6 @@
 # Display settings panel (button in the top menu). Viewers' choices are
 # remembered in their own browser. Colours themselves live in assets/css/main.css.
-button: Display
+button: Display settings   # read aloud by screen readers; shown on hover
 theme_label: Colour theme
 scheme_label: Appearance
 themes:
