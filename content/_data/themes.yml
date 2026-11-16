@@ -1,0 +1,13 @@
+# Display settings panel (button in the top menu). Viewers' choices are
+# remembered in their own browser. Colours themselves live in assets/css/main.css.
+button: Display
+theme_label: Colour theme
+scheme_label: Appearance
+themes:
+  - { key: crimson, name: Crimson }   # default
+  - { key: navy,    name: Navy }
+  - { key: forest,  name: Forest }
+schemes:
+  - { key: auto,  name: Auto }        # follows the device setting (default)
+  - { key: light, name: Light }
+  - { key: dark,  name: Dark }

@@ -9,5 +9,23 @@
         {%- endfor %}
       </ul>
     </nav>
+    {%- assign ds = site.data.themes %}
+    <div class="display">
+      <button type="button" class="display__toggle" id="display-toggle" aria-expanded="false" aria-controls="display-panel">{{ ds.button }}</button>
+      <div class="display__panel" id="display-panel" hidden>
+        <fieldset>
+          <legend class="label">{{ ds.theme_label }}</legend>
+          {%- for t in ds.themes %}
+          <label class="display__opt"><input type="radio" name="theme" value="{{ t.key }}"><span class="swatch swatch--{{ t.key }}" aria-hidden="true"></span>{{ t.name }}</label>
+          {%- endfor %}
+        </fieldset>
+        <fieldset>
+          <legend class="label">{{ ds.scheme_label }}</legend>
+          {%- for t in ds.schemes %}
+          <label class="display__opt"><input type="radio" name="scheme" value="{{ t.key }}">{{ t.name }}</label>
+          {%- endfor %}
+        </fieldset>
+      </div>
+    </div>
   </div>
 </header>
