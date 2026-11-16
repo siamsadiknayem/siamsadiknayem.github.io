@@ -17,7 +17,7 @@ intro: >-
   Let's explore that possibility through research, innovation, and engineering. My work introduces how near-infrared sensing 
   and machine learning can work together to make health monitoring simpler and less invasive. My journey into this field began 
   at KUET, where I completed my B.Sc. in Electrical and Electronic Engineering in 2025. Since then, this work has led to IEEE 
-  conference papers and a Q1 journal. Beyond research, I teach signals, digital signal processing, and electronics at two 
+  conference papers and a Q1 journal. Beyond research, I teach microprocessor, digital signal processing, and analog and digital electronics at two 
   universities in Bangladesh. 
 
   I find equal fulfillment in exploring new ideas and helping students develop the confidence to explore them for themselves.
@@ -36,9 +36,8 @@ positions:
 
 education:
   degree: B.Sc. in Electrical and Electronic Engineering
-  institution: Khulna University of Engineering & Technology (KUET)
+  institution: Khulna University of Engineering & Technology (KUET) - 2025 
   institution_short: KUET 
-  year: 2025
   period: 2020 – 2025
   note: Dean's Award Recipient (4 Consecutive Years)
 
