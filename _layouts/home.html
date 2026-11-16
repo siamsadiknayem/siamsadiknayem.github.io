@@ -10,7 +10,7 @@ layout: default
     <p class="hero__statement">{{ p.statement }}</p>
     {%- if p.intro_lead %}<p class="hero__lead">{{ p.intro_lead }}</p>{% endif %}
     <p class="hero__intro">{{ p.intro | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
-    {%- if p.intro_close %}<p class="hero__close">{{ p.intro_close }}</p>{% endif %}
+    {%- if p.intro_more %}<p class="hero__intro">{{ p.intro_more }}</p>{% endif %}
     <p class="hero__seeking">{{ p.seeking_line }}</p>
     <p class="buttons">
       {%- if p.cv_available %}

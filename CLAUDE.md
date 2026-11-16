@@ -80,7 +80,7 @@ or `bundle exec jekyll serve`. Posts with a future date are not built: that's th
   - Each section is a numbered mono label (`01 Research`) beside a content column, under a 1 px ink rule.
   - No gradients, shadows, rounded cards, decorative icons or animations.
   - **Viewer display settings** (added 16 Nov 2026 at Siam's request): a small gear button, fixed to the middle of the right edge of the screen (stays put while scrolling), lets visitors pick a colour theme (Crimson default, Navy, Forest) and Light / Dark / Auto. Labels: `content/_data/themes.yml`. Colours: `--accent-light` / `--accent-dark` per theme and the dark-scheme block at the top of `main.css`; never hard-code `#fff` or greys, use `--bg`, `--surface`, `--on-ink`. Script: `assets/js/theme.js` (vanilla, saves to localStorage); a tiny inline script in `head.html` applies the saved choice before paint.
-- **Homepage order:** hero (name, statement, intro, PHD line, buttons | photo, positions, education, seeking) → 01 Research → 02 Publications → 03 Teaching → 04 Leadership → 05 Updates.
+- **Homepage order:** hero (name, roles pill, bold question `statement`, `intro_lead`, `intro`, `intro_more` — all in profile.yml, PHD line, buttons | photo, positions, education, seeking) → 01 Research → 02 Publications → 03 Teaching → 04 Leadership → 05 Updates.
 - **Content lives in `_data` and Markdown.** Layouts should only change for design work.
 - **Only GitHub-Pages-safe plugins:** jekyll-seo-tag, jekyll-sitemap, jekyll-feed. Add no JS frameworks.
 - **Always use `| relative_url`** for internal links and assets, so a custom domain or baseurl keeps working.

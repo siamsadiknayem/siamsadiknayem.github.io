@@ -127,14 +127,18 @@ main { padding-top: 48px; padding-bottom: 48px; }
 .hero__aside { flex: 1 1 280px; min-width: 0; max-width: 360px; }
 .hero h1 { font-size: 36px; font-weight: 600; letter-spacing: -.015em; line-height: 1.1; }
 @media (min-width: 720px) { .hero h1 { font-size: 48px; } }
-.hero__roles { margin-top: 10px; font-size: 17px; font-weight: 600; letter-spacing: .01em; }
-@media (min-width: 720px) { .hero__roles { font-size: 19px; } }
-.hero__statement { margin-top: 22px; font-size: 21px; line-height: 1.45; max-width: 660px; }
-@media (min-width: 720px) { .hero__statement { font-size: 24px; } }
-.hero__lead { margin-top: 20px; max-width: 660px; font-size: 18px; color: var(--ink-2); }
-.hero__intro { margin-top: 16px; max-width: 660px; color: var(--ink-2); }
-.hero__close { margin-top: 16px; max-width: 660px; font-style: italic; color: var(--ink-2); }
-.hero__seeking { margin-top: 16px; max-width: 660px; font-weight: 500; }
+.hero__roles { display: inline-block; margin-top: 16px; padding: 5px 12px; border-radius: 999px;
+  font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.hero__statement { margin-top: 18px; max-width: 640px; font-size: 26px; font-weight: 600;
+  line-height: 1.25; letter-spacing: -.01em; }
+@media (min-width: 720px) { .hero__statement { font-size: 32px; } }
+.hero__lead { margin-top: 14px; max-width: 640px; font-size: 19px; line-height: 1.5; color: var(--ink-2); }
+@media (min-width: 720px) { .hero__lead { font-size: 21px; } }
+.hero__intro { margin-top: 18px; max-width: 640px; font-size: 16.5px; line-height: 1.65; color: var(--muted); }
+.hero__lead + .hero__intro { margin-top: 22px; }
+.hero__intro + .hero__intro { margin-top: 12px; }
+.hero__seeking { margin-top: 24px; max-width: 660px; font-weight: 500; }
 .hero__photo { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 
 .buttons { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 12px; font-size: 15px; }
