@@ -8,20 +8,30 @@ short_name: S. S. Nayem
 photo: /files/images/siam_squarephoto.png   # upload a new photo to files/images/
 photo_alt: Portrait of Siam Sadik Nayem
 
-# One sentence under your name on the homepage
+# Short line directly under your name on the homepage
+roles: Lecturer | Researcher | Mentor
+
+# One sentence under the roles line (the big question)
 statement: >-
   What if light could help us monitor blood glucose without a needle?
 
-# Homepage paragraph (first person)
-intro: >-
-  Let's explore that possibility through research, innovation, and engineering. My work introduces how near-infrared sensing 
-  and machine learning can work together to make health monitoring simpler and less invasive. My journey into this field began 
-  at KUET, where I completed my B.Sc. in Electrical and Electronic Engineering in 2025. Since then, this work has led to IEEE 
-  conference papers and a Q1 journal. Beyond research, I teach microprocessor, digital signal processing, and analog and digital electronics at two 
-  universities in Bangladesh. 
+# Homepage introduction (first person), shown as three paragraphs:
+intro_lead: >-
+  Let’s explore that possibility through research, innovation, and engineering.
 
-  I find equal fulfillment in exploring new ideas and helping students develop the confidence to explore them for themselves.
-  
+intro: >-
+  My work introduces how near-infrared sensing and machine learning can work
+  together to make health monitoring simpler and less invasive. My journey into
+  this field began at KUET, where I completed my B.Sc. in Electrical and
+  Electronic Engineering in 2025. Since then, this work has led to IEEE
+  conference papers and a Q1 journal. Beyond research, I teach microprocessor,
+  digital signal processing, digital electronics and few relevant courses at two
+  universities in Bangladesh.
+
+# Shown in italics
+intro_close: >-
+  I find equal fulfillment in exploring new ideas and helping students develop
+  the confidence to explore them for themselves.
 
 seeking_line: I am seeking PhD opportunities in biomedical optics and sensing.
 seeking_short: PhD position · biomedical optics, optical sensing, ML for health monitoring
