@@ -1,0 +1,2 @@
+{%- comment -%} Gmail "compose" link to Siam. Optional: subject="..." {%- endcomment -%}
+https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={{ site.data.profile.email }}{% if include.subject %}&amp;su={{ include.subject | url_encode }}{% endif %}

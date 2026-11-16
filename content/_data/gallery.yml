@@ -1,0 +1,18 @@
+# ---------------------------------------------------------------
+# Gallery from Google Drive: upload photos from your iPhone's Drive app.
+#
+# drive_folder: the id of your "Website Gallery" folder (the code after
+#   /folders/ in its share link). Share that folder as
+#   "Anyone with the link → Viewer". Every folder inside it is an album.
+#   See CONTENT_GUIDE.md, section 16.
+# ---------------------------------------------------------------
+drive_folder: "1c8HLdXC-qj2MoX7YTk6TSWBIfTqU3et4"   # "Website Gallery" in siamsadik202@gmail.com Drive
+
+# Optional: hide an album (its folder name) or a single photo (its file id)
+hidden: []
+
+# Optional: extra details for an album, keyed by its exact Drive folder name
+albums: {}
+#  "2024-10-12 IEEE ProCon 2024":
+#    location: KUET, Khulna
+#    description: The International Professional Activities Congress, organised by IEEE Student Branch KUET.

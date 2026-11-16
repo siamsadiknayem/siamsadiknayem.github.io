@@ -1,0 +1,7 @@
+# Top menu. "key" is matched against `nav:` in a page's front matter.
+- { title: Research, url: /research/, key: research }
+- { title: Publications, url: /publications/, key: publications }
+- { title: Teaching, url: /teaching/, key: teaching }
+- { title: About, url: /about/, key: about }
+- { title: Updates, url: /updates/, key: updates }
+- { title: CV, url: /cv/, key: cv }

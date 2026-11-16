@@ -1,0 +1,14 @@
+---
+layout: page
+---
+{{ content }}
+{%- assign albums = site.albums | sort: "date" | reverse %}
+{%- if albums.size > 0 %}
+<ul class="album-grid" style="margin-top:40px">
+  {%- for a in albums %}
+  {% include album-card.html album=a %}
+  {%- endfor %}
+</ul>
+{%- else %}
+<p class="notice" style="margin-top:32px">{{ page.empty_note }}</p>
+{%- endif %}

@@ -1,0 +1,23 @@
+{%- comment -%} One publication, Barron-style. Pass pub=... {%- endcomment -%}
+{%- assign item = include.pub -%}
+{%- if item.status == "under_review" -%}
+<li class="pub pub--review">
+  <p class="label">Under review</p>
+  <h3 class="pub__title">{{ item.title }}</h3>
+  <p class="pub__venue">{{ item.venue }}</p>
+</li>
+{%- else -%}
+<li class="pub" id="{{ item.id }}">
+  <h3 class="pub__title"><a href="https://doi.org/{{ item.doi }}">{{ item.title }}</a></h3>
+  <p class="pub__authors">{{ item.authors | replace: "S. S. Nayem", "<b>S. S. Nayem</b>" }}</p>
+  <p class="pub__venue"><i>{{ item.venue }}</i>{% if item.details %}, {{ item.details }}{% endif %}, {{ item.year }} · <span class="pub__tag">{{ item.tag }}</span></p>
+  <div class="pub__links">
+    <a href="https://doi.org/{{ item.doi }}">DOI</a>
+    {%- if item.pdf %}<span aria-hidden="true">/</span><a href="{{ item.pdf }}"{% if item.pdf_note %} title="{{ item.pdf_note }}"{% endif %}>PDF</a>{% endif %}
+    {%- if item.bibtex %}<span aria-hidden="true">/</span><details><summary>BibTeX</summary><code class="bibtex">{{ item.bibtex | strip | xml_escape }}</code></details>{% endif %}
+  </div>
+  {%- if item.summary %}
+  <p class="pub__summary">{{ item.summary }}</p>
+  {%- endif %}
+</li>
+{%- endif -%}

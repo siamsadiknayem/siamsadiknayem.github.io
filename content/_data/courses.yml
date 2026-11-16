@@ -1,0 +1,153 @@
+# ---------------------------------------------------------------
+# Every course you teach. Order = order on the Teaching page.
+#
+#   slug         short id; the course page is /courses/<slug>/
+#   page: true   course has its own page with a materials library
+#   drive_folder the Google Drive folder ID (the part after /folders/ in the
+#                share link). The site lists that folder automatically.
+#   semester     leave "" until confirmed
+# ---------------------------------------------------------------
+
+- slug: eee237
+  code: EEE 237
+  title: Continuous Signals and Linear Systems
+  institution: Southeast University
+  department: Department of EEE
+  programme: B.Sc. in EEE (Diploma Students)
+  kind: Theory
+  credits: 3 credits · 3 hours/week
+  semester: ""
+  role: Adjunct Lecturer
+  page: true
+  drive_folder: 12MrH8YEd6o_FpMLfXLqkxFwHZ9qcA9_F
+  related: eee325
+  summary: >-
+    Signals and LTI systems in continuous time: time-domain analysis and
+    convolution, Fourier series and transform, and the Laplace transform.
+  syllabus:
+    - heading: Classification of signals and systems
+      text: >-
+        Signals — classification, basic operations on signals, elementary signals,
+        representation of signals using the impulse function; systems — classification.
+    - heading: Properties of linear time-invariant (LTI) systems
+      text: Linearity, causality, time invariance, memory, stability, invertibility.
+    - heading: Time-domain analysis of LTI systems
+      text: >-
+        Differential equations — system representation, order of the system,
+        solution techniques, zero-state and zero-input response, system properties;
+        impulse response — convolution integral, determination of system
+        properties; state variables — basic concept, state equation and
+        time-domain solution.
+    - heading: Frequency-domain analysis of LTI systems
+      text: >-
+        Fourier series — properties, harmonic representation, system response,
+        frequency response of LTI systems; Fourier transform — properties, system
+        transfer function, system response and distortionless systems.
+    - heading: Applications of time- and frequency-domain analyses
+      text: >-
+        Solution of analog electrical and mechanical systems, amplitude modulation
+        and demodulation, time-division and frequency-division multiplexing.
+    - heading: Laplace transform
+      text: >-
+        Properties, inverse transform, solution of system equations, system
+        transfer function, system stability and frequency response, and applications.
+
+- slug: eee325
+  code: EEE 325
+  title: Digital Signal Processing I
+  institution: Southeast University
+  department: Department of EEE
+  programme: B.Sc. in EEE (Diploma Students)
+  kind: Theory
+  credits: 3 credits · 3 hours/week
+  semester: ""
+  role: Adjunct Lecturer
+  page: true
+  drive_folder: 1EiPscwm8ALYOc_ZI1viMxrOFKzEhqSPA
+  related: eee237
+  summary: >-
+    Discrete-time signals and systems, the DFT and FFT, the z-transform,
+    correlation, and FIR and IIR digital filter design.
+  syllabus:
+    - heading: Introduction to digital signal processing
+      text: >-
+        Discrete-time signals and systems, analog-to-digital conversion, impulse
+        response, finite impulse response (FIR) and infinite impulse response (IIR)
+        of discrete-time systems, difference equations, convolution, transient and
+        steady-state response.
+    - heading: Discrete transformations
+      text: >-
+        Discrete Fourier series, discrete-time Fourier series, discrete Fourier
+        transform (DFT) and properties, fast Fourier transform (FFT), inverse FFT;
+        z-transform — properties, transfer function, poles and zeros, inverse
+        z-transform.
+    - heading: Correlation
+      text: Circular convolution, auto-correlation and cross-correlation.
+    - heading: Digital filters
+      text: >-
+        FIR filters — linear-phase filters, specifications, design using window,
+        optimal and frequency-sampling methods; IIR filters — specifications,
+        design using impulse invariance, bilinear z-transformation, least-squares
+        methods, and finite-precision effects.
+
+- slug: eee326
+  code: EEE 326
+  title: Digital Signal Processing I Laboratory
+  institution: Southeast University
+  department: Department of EEE
+  programme: B.Sc. in EEE (Diploma Students)
+  kind: Lab
+  semester: ""
+  role: Adjunct Lecturer
+  page: false
+
+- slug: eee220
+  code: EEE 220
+  title: Electrical and Electronic Circuit Simulation Laboratory
+  institution: Southeast University
+  department: Department of EEE
+  programme: B.Sc. in EEE (Diploma Students)
+  kind: Lab
+  semester: ""
+  role: Adjunct Lecturer
+  page: false
+
+- slug: cse1303
+  code: CSE 1303
+  title: Electronic Devices and Circuits
+  institution: Bangladesh University
+  department: Department of CSE
+  kind: Theory
+  semester: ""
+  role: Lecturer
+  page: false
+
+- slug: cse3205
+  code: CSE 3205
+  title: Digital Electronics and Pulse Technique
+  institution: Bangladesh University
+  department: Department of CSE
+  kind: Theory
+  semester: ""
+  role: Lecturer
+  page: false
+
+- slug: cse2203
+  code: CSE 2203
+  title: Microprocessor and Assembly Language
+  institution: Bangladesh University
+  department: Department of CSE
+  kind: Theory
+  semester: ""
+  role: Lecturer
+  page: false
+
+- slug: cse1301
+  code: CSE 1301
+  title: Physics
+  institution: Bangladesh University
+  department: Department of CSE
+  kind: Theory
+  semester: ""
+  role: Lecturer
+  page: false

@@ -1,0 +1,51 @@
+# ---------------------------------------------------------------
+# EEE 237: how the files in the Google Drive folder are presented.
+#
+# The file LIST comes from Google Drive automatically (_data/drive/eee237.json).
+# This file only adds titles, order, grouping and credits.
+#   - A file in Drive that is not listed here still appears, under
+#     "Recently added", titled from its file name.
+#   - A file listed here but deleted from Drive simply disappears.
+#   - To hide a Drive file from the website, add its id under `hidden`.
+#
+# Find a file's id: open it in Drive → the long code in the address bar
+# between /d/ and /view.
+# ---------------------------------------------------------------
+
+credits:
+  cuff: >-
+    Lecture slides from ELE 301: Signals and Systems by Prof. Paul Cuff,
+    Princeton University (Fall 2011–12). Lecture 3 slides courtesy of
+    John Pauly, Stanford University.
+  sundaram: >-
+    ECE 301: Signals and Systems — Course Notes by Prof. Shreyas Sundaram,
+    Purdue University.
+
+groups:
+  - title: Signals, systems and time-domain analysis
+    items:
+      - id: 1HFHhTdVvb5T16rZ4YyPHkTtbta0v3NVo
+        label: Lecture 01
+        title: Introduction to signals — classification, operations, energy and power
+        type: slides
+        credit: cuff
+      - id: 1Pq9tFKPl4eQ9FcbQQnqsdc0opx084mRT
+        label: Lecture 02
+        title: Elementary signals and system properties
+        note: Sinusoids, exponentials, step, ramp and impulse; memory, causality, stability, invertibility, time invariance, linearity
+        type: slides
+        credit: cuff
+      - id: 1BimaI6oaB9FHbmT4sIudwTeYyzsX_G2p
+        label: Lecture 03
+        title: Time-domain analysis of LTI systems — impulse response and convolution
+        note: Includes zero-input and zero-state responses
+        type: slides
+        credit: cuff
+
+reading:
+  - id: 1lF2LMCPpc7U2A5Sn-QwTdGrRZOyHccOI
+    title: "Course notes: ECE 301 Signals and Systems"
+    type: notes
+    credit: sundaram
+
+hidden: []

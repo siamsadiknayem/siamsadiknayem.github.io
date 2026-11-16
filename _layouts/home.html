@@ -1,0 +1,148 @@
+---
+layout: default
+---
+{%- assign p = site.data.profile -%}
+{%- assign r = site.data.research -%}
+<section class="hero" aria-labelledby="name">
+  <div class="hero__text">
+    <h1 id="name">{{ p.name }}</h1>
+    <p class="hero__statement">{{ p.statement }}</p>
+    <p class="hero__intro">{{ p.intro | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+    <p class="hero__seeking">{{ p.seeking_line }}</p>
+    <p class="buttons">
+      {%- if p.cv_available %}
+      <a class="btn btn--primary" href="{{ p.cv_file | relative_url }}">Download CV</a>
+      {%- else %}
+      <a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">CV</a>
+      {%- endif %}
+      {%- for l in p.links limit: 2 %}
+      <a class="btn" href="{{ l.url }}">{{ l.label }}</a>
+      {%- endfor %}
+      <a class="btn" href="{% include email-href.html %}" target="_blank" rel="noopener">Email</a>
+    </p>
+  </div>
+  <aside class="hero__aside" aria-label="At a glance">
+    <img class="hero__photo" src="{{ p.photo | relative_url }}" alt="{{ p.photo_alt }}" width="640" height="640">
+    <dl class="facts">
+      <div>
+        <dt class="label">Current positions</dt>
+        {%- for pos in p.positions %}
+        <dd>{{ pos.title }}, {{ pos.org }} <span class="muted">· since {{ pos.since }}</span></dd>
+        {%- endfor %}
+      </div>
+      <div>
+        <dt class="label">Education</dt>
+        <dd>{{ p.education.degree }}<br><span class="secondary">{{ p.education.institution }}</span><br><span class="secondary">{{ p.education.year }}</span><br><span class="secondary">{{ p.education.note }}</span></dd>
+      </div>
+      <div>
+        <dt class="label label--accent">Seeking</dt>
+        <dd>{{ p.seeking_short }}</dd>
+      </div>
+    </dl>
+  </aside>
+</section>
+
+<section class="section" id="research" aria-labelledby="h-research">
+  <h2 class="section__label" id="h-research"><span class="num">01</span>Research</h2>
+  <div class="section__body">
+    <h3 class="featured-title">{{ r.featured.title }}</h3>
+    <p class="secondary measure">{{ r.featured.summary }}</p>
+    <dl class="pipeline">
+      {%- for s in r.featured.pipeline %}
+      <div><dt class="label">{{ s.label }}</dt><dd>{{ s.value }}<span class="note">{{ s.note }}</span></dd></div>
+      {%- endfor %}
+    </dl>
+    <p class="tiny muted" style="margin-top:10px">{{ r.featured.attribution }}</p>
+    <p class="small secondary"><span class="label inline-label">Outputs</span>{{ r.featured.outputs }}</p>
+    <div class="two-col">
+      <div>
+        <h4 class="label">Methods and tools</h4>
+        <ul class="list">{% for m in r.methods %}<li>{{ m }}</li>{% endfor %}</ul>
+      </div>
+      <div>
+        <h4 class="label label--accent">Questions I want to pursue next</h4>
+        <ul class="list">{% for q in r.questions %}<li>{{ q }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+    <ul class="tags" aria-label="Research interests">
+      <li class="label">Interests</li>
+      {%- for t in r.interests %}<li>{{ t }}</li>{% endfor %}
+    </ul>
+    <p class="more"><a href="{{ '/research/' | relative_url }}">More on my research →</a></p>
+  </div>
+</section>
+
+<section class="section" id="publications" aria-labelledby="h-pubs">
+  <h2 class="section__label" id="h-pubs"><span class="num">02</span>Publications</h2>
+  <div class="section__body">
+    <ul class="pubs">
+      {%- for pub in site.data.publications %}
+      {% include pub.html pub=pub %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="teaching" aria-labelledby="h-teach">
+  <h2 class="section__label" id="h-teach"><span class="num">03</span>Teaching</h2>
+  <div class="section__body">
+    <p class="secondary measure">{{ page.teaching_intro }}</p>
+    {% include course-groups.html %}
+    <p class="more"><a href="{{ '/teaching/' | relative_url }}">Course materials library →</a></p>
+  </div>
+</section>
+
+<section class="section" id="leadership" aria-labelledby="h-lead">
+  <h2 class="section__label" id="h-lead"><span class="num">04</span>Leadership</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {%- for l in site.data.leadership %}
+      <li><span class="when">{{ l.years }}</span><span class="what">{{ l.text }}</span></li>
+      {%- endfor %}
+    </ul>
+    <p class="more"><a href="{{ '/about/' | relative_url }}">Full background and timeline →</a></p>
+  </div>
+</section>
+
+{%- assign n = 4 -%}
+{%- assign v = site.data.vision -%}
+{%- if v.paragraphs and v.paragraphs.size > 0 %}
+{%- assign n = n | plus: 1 %}
+<section class="section" id="vision" aria-labelledby="h-vision">
+  <h2 class="section__label" id="h-vision"><span class="num">{% if n < 10 %}0{% endif %}{{ n }}</span>{{ v.title }}</h2>
+  <div class="section__body vision">
+    {%- for para in v.paragraphs %}
+    <p>{{ para }}</p>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
+
+{%- assign albums = site.albums | sort: "date" | reverse %}
+{%- if albums.size > 0 %}
+{%- assign n = n | plus: 1 %}
+<section class="section" id="gallery" aria-labelledby="h-gallery">
+  <h2 class="section__label" id="h-gallery"><span class="num">{% if n < 10 %}0{% endif %}{{ n }}</span>Gallery</h2>
+  <div class="section__body">
+    <ul class="album-grid">
+      {%- for a in albums limit: 3 %}
+      {% include album-card.html album=a %}
+      {%- endfor %}
+    </ul>
+    <p class="more"><a href="{{ '/gallery/' | relative_url }}">All albums →</a></p>
+  </div>
+</section>
+{%- endif %}
+{%- assign n = n | plus: 1 %}
+
+<section class="section" id="updates" aria-labelledby="h-upd">
+  <h2 class="section__label" id="h-upd"><span class="num">{% if n < 10 %}0{% endif %}{{ n }}</span>Updates</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {%- for n in site.data.news limit: 3 %}
+      <li><span class="when">{{ n.date }}</span><span class="what">{{ n.text }}</span></li>
+      {%- endfor %}
+    </ul>
+    <p class="more"><a href="{{ '/updates/' | relative_url }}">All updates →</a></p>
+  </div>
+</section>

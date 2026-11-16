@@ -1,0 +1,64 @@
+---
+layout: page
+---
+{{ content }}
+{%- assign r = site.data.research -%}
+{%- assign f = r.featured -%}
+
+<section class="section" aria-labelledby="h-done">
+  <h2 class="section__label" id="h-done"><span class="num">01</span>Completed work</h2>
+  <div class="section__body">
+    <h3 class="featured-title">{{ f.title }}</h3>
+    <div class="two-col">
+      <div>
+        <h4 class="label">The problem</h4>
+        <p class="secondary" style="margin-top:8px">{{ f.problem }}</p>
+      </div>
+      <div>
+        <h4 class="label">The approach</h4>
+        <p class="secondary" style="margin-top:8px">{{ f.approach }}</p>
+      </div>
+    </div>
+    <dl class="pipeline">
+      {%- for s in f.pipeline %}
+      <div><dt class="label">{{ s.label }}</dt><dd>{{ s.value }}<span class="note">{{ s.note }}</span></dd></div>
+      {%- endfor %}
+    </dl>
+    <p class="tiny muted" style="margin-top:10px">{{ f.attribution }}</p>
+    <p class="small secondary"><span class="label inline-label">Outputs</span>{{ f.outputs }}</p>
+    <p class="small secondary"><span class="label inline-label">Thesis</span>{{ f.thesis }}</p>
+    {%- if f.collaborators %}<p class="small secondary"><span class="label inline-label">With</span>{{ f.collaborators }} <a href="{{ '/publications/' | relative_url }}">See publications →</a></p>{% endif %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-other">
+  <h2 class="section__label" id="h-other"><span class="num">02</span>Other work</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {%- for o in r.other_work %}
+      <li><span class="what">{{ o.title }}</span><span class="when" style="flex-basis:auto">{{ o.status }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-methods">
+  <h2 class="section__label" id="h-methods"><span class="num">03</span>Methods and tools</h2>
+  <div class="section__body">
+    <ul class="list" style="margin-top:0">{% for m in r.methods %}<li>{{ m }}</li>{% endfor %}</ul>
+    <p class="more"><a href="{{ '/projects/' | relative_url }}">Engineering projects →</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-next">
+  <h2 class="section__label" id="h-next"><span class="num">04</span>Next questions</h2>
+  <div class="section__body">
+    <p class="secondary measure">{{ page.next_intro }}</p>
+    <ul class="list">{% for q in r.questions %}<li>{{ q }}</li>{% endfor %}</ul>
+    <ul class="tags" aria-label="Research interests">
+      <li class="label">Interests</li>
+      {%- for t in r.interests %}<li>{{ t }}</li>{% endfor %}
+    </ul>
+    <p class="more">{{ page.contact_line }} <a href="{% include email-href.html subject="PhD opportunities" %}" target="_blank" rel="noopener">{{ site.data.profile.email }}</a></p>
+  </div>
+</section>

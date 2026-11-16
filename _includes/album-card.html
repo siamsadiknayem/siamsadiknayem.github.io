@@ -1,0 +1,12 @@
+{%- assign a = include.album -%}
+{%- assign cover = a.cover | default: a.photos.first.file -%}
+<li class="album-card">
+  <a class="album-card__link" href="{{ a.url | relative_url }}">
+    {%- if cover %}
+    <img class="album-card__img" src="{{ cover | relative_url }}" alt="{{ a.cover_alt | default: a.title }}" loading="lazy">
+    {%- endif %}
+    <span class="album-card__title">{{ a.title }}</span>
+  </a>
+  <p class="album-card__meta">{{ a.date | date: "%b %Y" }}{% if a.location %} · {{ a.location }}{% endif %} · {{ a.photos.size }} photo{% if a.photos.size != 1 %}s{% endif %}</p>
+  {%- if a.description %}<p class="album-card__desc">{{ a.description }}</p>{% endif %}
+</li>

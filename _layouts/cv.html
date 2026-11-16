@@ -1,0 +1,74 @@
+---
+layout: page
+---
+{%- assign p = site.data.profile -%}
+<p class="buttons" style="margin-top:0">
+{%- if p.cv_available %}
+  <a class="btn btn--primary" href="{{ p.cv_file | relative_url }}">Download full CV (PDF)</a>
+  {%- if p.cv_updated and p.cv_updated != "" %}<span class="small muted" style="align-self:center">Updated {{ p.cv_updated }}</span>{% endif %}
+{%- else %}
+  <span class="btn btn--disabled" aria-disabled="true">PDF CV — available on request</span>
+  <a class="btn" href="{% include email-href.html subject="CV request" %}" target="_blank" rel="noopener">Request by email</a>
+{%- endif %}
+</p>
+{{ content }}
+
+<section class="section" aria-labelledby="h-pos">
+  <h2 class="section__label" id="h-pos"><span class="num">01</span>Positions</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {%- for t in site.data.timeline %}{% if t.period contains "present" %}
+      <li><span class="when">{{ t.period }}</span><span class="what">{{ t.role }}<br><span class="small muted">{{ t.org }}</span></span></li>
+      {%- endif %}{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-edu">
+  <h2 class="section__label" id="h-edu"><span class="num">02</span>Education</h2>
+  <div class="section__body">
+    <ul class="rows">
+      <li><span class="when">{{ p.education.year }}</span><span class="what">{{ p.education.degree }}<br><span class="small muted">{{ p.education.institution }}</span><br><span class="small muted">{{ p.education.note }}</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-cvpub">
+  <h2 class="section__label" id="h-cvpub"><span class="num">03</span>Publications</h2>
+  <div class="section__body">
+    <ul class="pubs">
+      {%- for pub in site.data.publications %}
+      {% include pub.html pub=pub %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-cvteach">
+  <h2 class="section__label" id="h-cvteach"><span class="num">04</span>Teaching</h2>
+  <div class="section__body">
+    {% include course-groups.html %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-honours">
+  <h2 class="section__label" id="h-honours"><span class="num">05</span>Honours</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {%- for h in site.data.honours %}
+      <li><span class="when">{{ h.year }}</span><span class="what">{{ h.text }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-lead">
+  <h2 class="section__label" id="h-lead"><span class="num">06</span>Leadership</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {%- for l in site.data.leadership %}
+      <li><span class="when">{{ l.years }}</span><span class="what">{{ l.text }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

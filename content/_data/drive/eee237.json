@@ -1,0 +1,55 @@
+{
+  "folder": "12MrH8YEd6o_FpMLfXLqkxFwHZ9qcA9_F",
+  "synced": "2026-11-16T05:10:00Z",
+  "source": "initial listing (Claude, via Google Drive connector)",
+  "files": [
+    {
+      "id": "1HFHhTdVvb5T16rZ4YyPHkTtbta0v3NVo",
+      "name": "CSLS_SISN_lecture1.pdf",
+      "mimeType": "application/pdf",
+      "modifiedTime": "2026-10-26T08:18:47Z",
+      "size": 1828530,
+      "ext": "pdf",
+      "folder": "",
+      "view": "https://drive.google.com/file/d/1HFHhTdVvb5T16rZ4YyPHkTtbta0v3NVo/view",
+      "download": "https://drive.google.com/uc?export=download&id=1HFHhTdVvb5T16rZ4YyPHkTtbta0v3NVo",
+      "title": "CSLS SISN lecture1"
+    },
+    {
+      "id": "1Pq9tFKPl4eQ9FcbQQnqsdc0opx084mRT",
+      "name": "CSLS_SISN_lecture2.pdf",
+      "mimeType": "application/pdf",
+      "modifiedTime": "2026-10-26T08:21:00Z",
+      "size": 2780229,
+      "ext": "pdf",
+      "folder": "",
+      "view": "https://drive.google.com/file/d/1Pq9tFKPl4eQ9FcbQQnqsdc0opx084mRT/view",
+      "download": "https://drive.google.com/uc?export=download&id=1Pq9tFKPl4eQ9FcbQQnqsdc0opx084mRT",
+      "title": "CSLS SISN lecture2"
+    },
+    {
+      "id": "1BimaI6oaB9FHbmT4sIudwTeYyzsX_G2p",
+      "name": "CSLS_SISN_lecture3.pdf",
+      "mimeType": "application/pdf",
+      "modifiedTime": "2026-10-26T08:22:14Z",
+      "size": 2324033,
+      "ext": "pdf",
+      "folder": "",
+      "view": "https://drive.google.com/file/d/1BimaI6oaB9FHbmT4sIudwTeYyzsX_G2p/view",
+      "download": "https://drive.google.com/uc?export=download&id=1BimaI6oaB9FHbmT4sIudwTeYyzsX_G2p",
+      "title": "CSLS SISN lecture3"
+    },
+    {
+      "id": "1lF2LMCPpc7U2A5Sn-QwTdGrRZOyHccOI",
+      "name": "Sundaram_ECE301_Notes.pdf",
+      "mimeType": "application/pdf",
+      "modifiedTime": "2026-10-02T06:05:01Z",
+      "size": 563521,
+      "ext": "pdf",
+      "folder": "",
+      "view": "https://drive.google.com/file/d/1lF2LMCPpc7U2A5Sn-QwTdGrRZOyHccOI/view",
+      "download": "https://drive.google.com/uc?export=download&id=1lF2LMCPpc7U2A5Sn-QwTdGrRZOyHccOI",
+      "title": "Sundaram ECE301 Notes"
+    }
+  ]
+}

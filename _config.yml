@@ -1,0 +1,69 @@
+# =================================================================
+#  DESIGN / SITE CONFIGURATION: set once, rarely changed.
+#  Your content does NOT live here. It lives in:
+#    content/   text: profile, publications, courses, news, articles, pages
+#    files/     uploads: photo, CV PDF, article images
+#  See CONTENT_GUIDE.md.
+# =================================================================
+
+title: Siam Sadik Nayem
+description: >-
+  Lecturer in Dhaka. Research in biomedical optical sensing: near-infrared
+  spectroscopy and machine learning for non-invasive blood glucose measurement.
+author: Siam Sadik Nayem
+lang: en
+timezone: Asia/Dhaka
+
+# Public address. Repository: github.com/siamsadiknayem/siamsadiknayem.github.io
+# (a "user site": the repository name matches the username, so no sub-folder).
+# Custom domain later? Put it here and add it under Settings → Pages.
+url: "https://siamsadiknayem.github.io"
+baseurl: ""
+
+image: /files/images/siam.jpg   # social-preview image
+
+# ---- Where content lives (keeps content separate from design) ----
+data_dir: content/_data          # profile, publications, courses, news ...
+collections_dir: content         # content/_posts, content/_drafts, content/_pages
+collections:
+  pages:
+    output: true                 # content/_pages/*.md become site pages
+  albums:
+    output: true                 # content/_albums/*.md become gallery albums
+    permalink: /gallery/:name/
+
+permalink: /updates/:year/:month/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+plugins:                         # only GitHub Pages–supported plugins
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: updates/feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: pages }
+    values: { layout: page }
+  - scope: { path: "", type: albums }
+    values: { layout: album }
+
+exclude:
+  - README.md
+  - CONTENT_GUIDE.md
+  - CLAUDE.md
+  - content/README.md
+  - scripts/
+  - tools/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .github/
+  - .jekyll-cache/

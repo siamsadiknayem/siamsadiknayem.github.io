@@ -1,0 +1,32 @@
+---
+layout: page
+---
+{{ content }}
+{%- if site.posts.size > 0 %}
+<section class="section" aria-labelledby="h-art" style="margin-top:48px">
+  <h2 class="section__label" id="h-art"><span class="num">01</span>Articles</h2>
+  <div class="section__body">
+    <ul class="post-list">
+      {%- for post in site.posts %}
+      <li>
+        <p class="label">{{ post.date | date: "%-d %b %Y" }}{% if post.category %} · {{ post.category }}{% endif %}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {%- if post.excerpt %}<p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>{% endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section" aria-labelledby="h-news"{% if site.posts.size == 0 %} style="margin-top:48px"{% endif %}>
+  <h2 class="section__label" id="h-news"><span class="num">{% if site.posts.size > 0 %}02{% else %}01{% endif %}</span>News</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {%- for n in site.data.news %}
+      <li><span class="when">{{ n.date }}</span><span class="what">{{ n.text }}</span></li>
+      {%- endfor %}
+    </ul>
+    <p class="tiny muted"><a href="{{ '/updates/feed.xml' | relative_url }}">RSS feed</a></p>
+  </div>
+</section>

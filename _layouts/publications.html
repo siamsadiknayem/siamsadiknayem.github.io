@@ -1,0 +1,15 @@
+---
+layout: page
+---
+{{ content }}
+<section class="section" aria-labelledby="h-pub" style="margin-top:48px">
+  <h2 class="section__label" id="h-pub"><span class="num">01</span>Journal and conference papers</h2>
+  <div class="section__body">
+    <ul class="pubs">
+      {%- for pub in site.data.publications %}
+      {% include pub.html pub=pub %}
+      {%- endfor %}
+    </ul>
+    {%- assign gs = site.data.profile.links | where: "label", "Google Scholar" | first %}{% if gs %}<p class="more">Also on <a href="{{ gs.url }}">Google Scholar</a>.</p>{% endif %}
+  </div>
+</section>

@@ -1,0 +1,86 @@
+# ---------------------------------------------------------------
+# Publications, newest first. Only VERIFIED work goes here.
+#   status: published | under_review
+#   me_first: true if you are first author (bold name shows it either way)
+# Your name is written exactly as "S. S. Nayem" so it can be bolded.
+# ---------------------------------------------------------------
+
+- id: paul2026acsomega
+  status: published
+  type: journal
+  tag: JOURNAL · Q1
+  year: 2026
+  title: Noninvasive Blood Glucose Monitoring with Machine Learning Enhanced Transmittance Spectroscopy
+  authors: T. K. Paul, S. S. Nayem, M. A. Rakib, M. J. Islam, M. R. Kaysir, S. Rassel
+  venue: ACS Omega
+  details: 11(19), 27931–27941
+  doi: 10.1021/acsomega.5c11682
+  pdf: https://doi.org/10.1021/acsomega.5c11682
+  pdf_note: Open access (CC BY-NC-ND 4.0)
+  summary: >-
+    Identifies 940 nm as the most suitable wavelength and estimates glucose from
+    in vivo transmittance with ensemble machine learning, validated on 200
+    clinical samples.
+  bibtex: |
+    @article{paul2026noninvasive,
+      title   = {Noninvasive Blood Glucose Monitoring with Machine Learning Enhanced Transmittance Spectroscopy},
+      author  = {Paul, Tanmoy Kumar and Nayem, Siam Sadik and Rakib, Md Abdur and Islam, Md Jahirul and Kaysir, Md Rejvi and Rassel, Shazzad},
+      journal = {ACS Omega},
+      volume  = {11},
+      number  = {19},
+      pages   = {27931--27941},
+      year    = {2026},
+      doi     = {10.1021/acsomega.5c11682}
+    }
+
+- id: furkan2026qpain
+  status: published
+  type: conference
+  tag: CONFERENCE
+  year: 2026
+  title: An IoT Enabled UAV Platform for Real Time Patient Health Monitoring and Medical Response
+  authors: M. Furkan, M. I. Jahangir, S. S. Nayem, A. Ahmed, N. K. Roy
+  venue: IEEE QPAIN
+  venue_full: 2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence and Networking (QPAIN), CUET, Chattogram
+  doi: 10.1109/QPAIN69676.2026.11545637
+  summary: >-
+    A UAV platform with IoT-connected sensing for real-time patient monitoring
+    and medical response.
+  bibtex: |
+    @inproceedings{furkan2026iot,
+      title     = {An IoT Enabled UAV Platform for Real Time Patient Health Monitoring and Medical Response},
+      author    = {Furkan, MD and Jahangir, Mohammad Irshad and Nayem, Siam Sadik and Ahmed, Anis and Roy, Naruttam Kumar},
+      booktitle = {2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence and Networking (QPAIN)},
+      year      = {2026},
+      doi       = {10.1109/QPAIN69676.2026.11545637}
+    }
+
+- id: nayem2025qpain
+  status: published
+  type: conference
+  tag: CONFERENCE
+  me_first: true
+  year: 2025
+  title: "Development of a Non-Invasive Multispectral Glucose Measurement System: Integrating Optical Sensor and Vis-NIR Spectroscopy"
+  authors: S. S. Nayem, T. K. Paul, M. N. H. Sifat, M. J. Islam, M. R. Kaysir
+  venue: IEEE QPAIN
+  venue_full: 2025 IEEE International Conference on Quantum Photonics, Artificial Intelligence and Networking (QPAIN), BAUST, Saidpur
+  doi: 10.1109/QPAIN66474.2025.11171946
+  summary: >-
+    The multispectral optical sensor and Vis-NIR measurement system developed in
+    my undergraduate thesis.
+  bibtex: |
+    @inproceedings{nayem2025development,
+      title     = {Development of a Non-Invasive Multispectral Glucose Measurement System: Integrating Optical Sensor and Vis-NIR Spectroscopy},
+      author    = {Nayem, Siam Sadik and Paul, Tanmoy Kumar and Sifat, Md. Nahid Hasan and Islam, Md. Jahirul and Kaysir, Md Rejvi},
+      booktitle = {2025 IEEE International Conference on Quantum Photonics, Artificial Intelligence and Networking (QPAIN)},
+      year      = {2025},
+      doi       = {10.1109/QPAIN66474.2025.11171946}
+    }
+
+# Under review: title only, never shown as published.
+- id: thyroid-review
+  status: under_review
+  type: conference
+  title: Hybrid XGBoost–Attention Network for Binary Thyroid Disease Screening from Five Laboratory Features
+  venue: IEEE conference

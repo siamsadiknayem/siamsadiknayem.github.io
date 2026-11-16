@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------
+# Who you are. Shown on the homepage, About page and footer.
+# Facts here must match your CV (see CLAUDE.md, "Accuracy rules").
+# ---------------------------------------------------------------
+
+name: Siam Sadik Nayem
+short_name: S. S. Nayem
+photo: /files/images/siam.jpg   # upload a new photo to files/images/
+photo_alt: Portrait of Siam Sadik Nayem
+
+# One sentence under your name on the homepage
+statement: >-
+  My research uses near-infrared light and machine learning to measure blood
+  glucose without a needle.
+
+# Homepage paragraph (first person)
+intro: >-
+  I completed my B.Sc. in Electrical and Electronic Engineering at KUET in 2025,
+  where this work began as my undergraduate thesis. It has since led to a
+  first-author IEEE conference paper and a co-authored article in *ACS Omega*.
+  I now teach signals, digital signal processing and electronics at two
+  renowned universities in Bangladesh.
+
+seeking_line: I am seeking PhD opportunities in biomedical optics and sensing.
+seeking_short: PhD position · biomedical optics, optical sensing, ML for health monitoring
+
+positions:
+  - title: Lecturer, Dept. of CSE
+    org: Bangladesh University
+    since: Jan 2026
+  - title: Adjunct Lecturer, Dept. of EEE
+    org: Southeast University
+    since: Jul 2026
+
+education:
+  degree: B.Sc. in Electrical and Electronic Engineering
+  institution: Khulna University of Engineering & Technology (KUET)
+  institution_short: KUET
+  year: 2025
+  period: 2020 – 2025
+  note: Dean's Award Recipient for academic excellence (4 Consecutive Years)
+
+# Public contact details (approved by Siam, 16 Nov 2026)
+email: siamsadik202@gmail.com
+links:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=c8YqMrMAAAAJ
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/siam-sadik-nayem/
+  - label: ResearchGate
+    url: https://www.researchgate.net/profile/Siam-Sadik/research
+  - label: IEEE Collabratec
+    url: https://ieee-collabratec.ieee.org/app/p/SiamSadikNayem
+
+# CV download. Put a PUBLIC version (no phone, address or references) at
+# files/Siam_Sadik_Nayem_CV.pdf, then set cv_available to true.
+cv_file: /files/Siam_Sadik_Nayem_CV.pdf
+cv_available: true
+cv_updated: "Nov 2026"

@@ -1,0 +1,35 @@
+---
+layout: page
+---
+{%- assign p = site.data.profile -%}
+<div class="two-col" style="align-items:flex-start">
+  <div class="prose" style="flex:2 1 460px">
+    {{ content }}
+  </div>
+  <div style="flex:1 1 240px;max-width:320px">
+    <img src="{{ p.photo | relative_url }}" alt="{{ p.photo_alt }}" width="640" height="640" loading="lazy">
+  </div>
+</div>
+
+<section class="section" aria-labelledby="h-time">
+  <h2 class="section__label" id="h-time"><span class="num">01</span>Timeline</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {%- for t in site.data.timeline %}
+      <li><span class="when">{{ t.period }}</span><span class="what">{{ t.role }}<br><span class="small muted">{{ t.org }}</span></span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-contact">
+  <h2 class="section__label" id="h-contact"><span class="num">02</span>Contact</h2>
+  <div class="section__body">
+    <p>Email: <a href="{% include email-href.html %}" target="_blank" rel="noopener">{{ p.email }}</a></p>
+    <ul class="rows">
+      {%- for l in p.links %}
+      <li><span class="when">{{ l.label }}</span><span class="what"><a href="{{ l.url }}" rel="me">{{ l.url | remove: "https://" | remove: "www." }}</a></span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

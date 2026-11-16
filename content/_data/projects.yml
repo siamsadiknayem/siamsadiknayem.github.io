@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------
+# Engineering projects (Projects page). Research projects live on the
+# Research page; this page is for hands-on technical work.
+#   category: research | engineering | team
+# Only add details you can verify. Leave `period` "" if unsure.
+# ---------------------------------------------------------------
+
+- title: Mars rover control and communication system
+  category: team
+  context: KUET Mars Rover Team Durbar · International Rover Challenge 2024, India
+  period: 2024–2025
+  problem: Operating a rover over long distances outdoors needs a reliable control link and a live video feed.
+  contribution: >-
+    As Autonomous Team Lead, designed and implemented the rover's communication
+    system on a Raspberry Pi, with long-range wireless connectivity through
+    customer-premises equipment (CPE) and 5.8 GHz video transmission for
+    first-person-view (FPV) operation.
+  tools: [Raspberry Pi, Arduino Mega, CPE wireless link, 5.8 GHz video Tx/Rx]
+
+- title: UAV payload-drop mechanism for mosquito-borne disease control
+  category: engineering
+  context: Undergraduate project, KUET
+  period: ""
+  problem: Mosquito breeding sites are hard to reach and treat by hand.
+  contribution: >-
+    Developed a UAV-based approach that identifies likely breeding sites with
+    image processing and deploys a payload with a custom rotational drop mechanism.
+  tools: [KK2.1.5 flight controller, OpenCV, Arduino]
+
+- title: IR-modulated data transmission system
+  category: engineering
+  context: Undergraduate project, KUET
+  period: ""
+  problem: Sending data over an infrared link reliably in the presence of ambient light.
+  contribution: >-
+    Designed transmitter and receiver circuits using 38 kHz carrier modulation,
+    and produced 3D PCB models for both boards.
+  tools: [Arduino Uno, Proteus, EasyEDA]

@@ -1,0 +1,25 @@
+---
+layout: default
+nav: gallery
+---
+<p class="breadcrumb"><a href="{{ '/gallery/' | relative_url }}">Gallery</a></p>
+<header style="margin-top:24px">
+  <p class="label label--accent">{{ page.date | date: "%-d %B %Y" }}{% if page.location %} · {{ page.location }}{% endif %}</p>
+  <h1 style="margin-top:10px;font-size:clamp(28px,4.5vw,38px);font-weight:600;letter-spacing:-.01em;max-width:820px">{{ page.title }}</h1>
+  {%- if page.description %}<p class="lede secondary" style="margin-top:14px;max-width:720px;font-size:18px">{{ page.description }}</p>{% endif %}
+</header>
+{%- if content != "" %}<div class="prose" style="margin-top:24px">{{ content }}</div>{% endif %}
+
+<ul class="photo-grid" aria-label="Photos">
+  {%- for ph in page.photos %}
+  <li>
+    <figure>
+      <a href="{{ ph.file | relative_url }}" target="_blank" rel="noopener" aria-label="Open full-size photo{% if ph.caption %}: {{ ph.caption }}{% endif %} (new tab)">
+        <img src="{{ ph.file | relative_url }}" alt="{{ ph.alt | default: ph.caption | default: page.title }}" loading="lazy">
+      </a>
+      {%- if ph.caption %}<figcaption>{{ ph.caption }}</figcaption>{% endif %}
+    </figure>
+  </li>
+  {%- endfor %}
+</ul>
+<p class="more" style="margin-top:40px"><a href="{{ '/gallery/' | relative_url }}">← All albums</a></p>

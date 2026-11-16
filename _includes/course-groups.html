@@ -1,0 +1,15 @@
+{%- comment -%} Courses grouped by institution (homepage + Teaching page). {%- endcomment -%}
+{%- assign groups = site.data.courses | group_by: "institution" -%}
+<div class="course-groups">
+  {%- for g in groups %}
+  {%- assign first = g.items | first %}
+  <div>
+    <h3>{{ g.name }} <span>· {{ first.department | remove: "Department of " }}</span></h3>
+    <ul class="course-list">
+      {%- for c in g.items %}
+      <li><span class="code">{{ c.code }}</span><span>{% if c.page %}<a href="{{ '/courses/' | append: c.slug | append: '/' | relative_url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endfor %}
+</div>

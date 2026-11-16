@@ -1,0 +1,19 @@
+---
+layout: page
+---
+{{ content }}
+<p class="small"><a href="{{ '/research/' | relative_url }}">← Research</a></p>
+{%- for pr in site.data.projects %}
+<section class="section" aria-labelledby="pr-{{ forloop.index }}"{% if forloop.first %} style="margin-top:40px"{% endif %}>
+  <h2 class="section__label" id="pr-{{ forloop.index }}"><span class="num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>{% if pr.category == "team" %}Team{% else %}Engineering{% endif %}</h2>
+  <div class="section__body">
+    <h3 class="featured-title">{{ pr.title }}</h3>
+    <p class="small muted">{{ pr.context }}{% if pr.period != "" %} · {{ pr.period }}{% endif %}</p>
+    <div class="two-col">
+      <div><h4 class="label">Problem</h4><p class="secondary" style="margin-top:6px">{{ pr.problem }}</p></div>
+      <div><h4 class="label">My contribution</h4><p class="secondary" style="margin-top:6px">{{ pr.contribution }}</p></div>
+    </div>
+    <ul class="tags" aria-label="Tools"><li class="label">Tools</li>{% for t in pr.tools %}<li>{{ t }}</li>{% endfor %}</ul>
+  </div>
+</section>
+{%- endfor %}

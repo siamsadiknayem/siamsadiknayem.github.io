@@ -1,0 +1,73 @@
+# Builds the website and publishes it to GitHub Pages.
+#
+# Runs:
+#   - whenever you push a change to the main branch
+#   - every 6 hours, to pick up changes in your Google Drive course and gallery folders
+#   - on demand: Actions tab → "Build and deploy site" → "Run workflow"
+#
+# One-time setup (see CONTENT_GUIDE.md, section 10):
+#   Settings → Pages → Source: "GitHub Actions"
+#   Settings → Secrets and variables → Actions → New secret GOOGLE_API_KEY
+
+name: Build and deploy site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install helpers
+        run: python3 -m pip install --quiet pyyaml pillow pillow-heif
+
+      - name: Sync course materials from Google Drive
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: python3 scripts/sync_drive.py
+        # If Drive is unreachable, still publish the site with the last saved lists.
+        continue-on-error: true
+
+      - name: Build gallery albums from Google Drive (iPhone uploads)
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: python3 scripts/sync_gallery.py
+        continue-on-error: true
+
+      - name: Prepare uploaded photos (resize, fix rotation, remove GPS data)
+        run: python3 scripts/optimize_images.py
+
+      - uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll (same engine as GitHub Pages)
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,16 @@
+# ---------------------------------------------------------------
+# Short dated news, newest first. The homepage shows the first 3.
+# For longer write-ups, add an article in _posts/ (see CONTENT_GUIDE.md).
+# ---------------------------------------------------------------
+- date: Jul 2026
+  text: Joined Southeast University as Adjunct Lecturer, Department of EEE.
+- date: "2026"
+  text: Glucose-monitoring article published in <i>ACS Omega</i>.
+- date: Apr 2026
+  text: Co-authored paper presented at IEEE QPAIN 2026, CUET.
+- date: Jan 2026
+  text: Joined Bangladesh University as Lecturer, Department of CSE.
+- date: Oct 2025
+  text: Completed B.Sc. in Electrical and Electronic Engineering at KUET.
+- date: Aug 2025
+  text: Presented first-author paper at IEEE QPAIN 2025, BAUST, Saidpur.

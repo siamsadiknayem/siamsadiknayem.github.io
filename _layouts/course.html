@@ -1,0 +1,56 @@
+---
+layout: default
+nav: teaching
+---
+{%- assign c = site.data.courses | where: "slug", page.course | first -%}
+{%- assign d = site.data.drive[c.slug] -%}
+<p class="breadcrumb"><a href="{{ '/teaching/' | relative_url }}">Teaching</a> / {{ c.institution }} / {{ c.code }}</p>
+
+<header style="margin-top:28px">
+  <p class="label label--accent">{{ c.code }} · {{ c.kind }} course</p>
+  <h1 style="margin-top:10px;font-size:clamp(30px,5vw,40px);font-weight:600;letter-spacing:-.01em">{{ c.title }}</h1>
+  <dl class="course-meta">
+    <div><dt class="label">Institution</dt><dd>{{ c.institution }}, {{ c.department | replace: "Department of ", "Dept. of " }}</dd></div>
+    {%- if c.programme %}<div><dt class="label">Programme</dt><dd>{{ c.programme }}</dd></div>{% endif %}
+    {%- if c.credits %}<div><dt class="label">Load</dt><dd>{{ c.credits }}</dd></div>{% endif %}
+    {%- if c.semester != "" and c.semester %}<div><dt class="label">Semester</dt><dd>{{ c.semester }}</dd></div>{% endif %}
+    <div><dt class="label">Instructor</dt><dd>{{ site.data.profile.name }}, {{ c.role }}</dd></div>
+  </dl>
+  <p class="buttons">
+    {%- if d.folder %}<a class="btn btn--primary" href="https://drive.google.com/drive/folders/{{ d.folder }}" target="_blank" rel="noopener">All materials (Google Drive) ↗</a>{% endif %}
+    <a class="btn" href="#lectures">Lectures</a>
+    <a class="btn" href="#syllabus">Syllabus</a>
+  </p>
+</header>
+
+<section class="section" id="about-course" aria-labelledby="h-about" style="margin-top:56px">
+  <h2 class="section__label" id="h-about"><span class="num">01</span>About the course</h2>
+  <div class="section__body">
+    <p class="measure">{{ c.summary }}</p>
+    {{ content }}
+  </div>
+</section>
+
+<section class="section" id="lectures" aria-labelledby="h-lec">
+  <h2 class="section__label" id="h-lec"><span class="num">02</span>Lectures</h2>
+  <div class="section__body">
+    {% include course-materials.html slug=c.slug %}
+  </div>
+</section>
+
+<section class="section" id="syllabus" aria-labelledby="h-syl">
+  <h2 class="section__label" id="h-syl"><span class="num">03</span>Syllabus</h2>
+  <div class="section__body">
+    <dl class="syllabus">
+      {%- for s in c.syllabus %}
+      <dt>{{ s.heading }}</dt>
+      <dd>{{ s.text }}</dd>
+      {%- endfor %}
+    </dl>
+    <p class="tiny muted">From the {{ c.institution }} course curriculum.</p>
+    {%- if c.related %}
+    {%- assign rc = site.data.courses | where: "slug", c.related | first %}
+    <p class="small">Related course: <a href="{{ '/courses/' | append: rc.slug | append: '/' | relative_url }}">{{ rc.code }} {{ rc.title }}</a> · Questions about the material: <a href="{% include email-href.html subject=c.code %}" target="_blank" rel="noopener">{{ site.data.profile.email }}</a></p>
+    {%- endif %}
+  </div>
+</section>

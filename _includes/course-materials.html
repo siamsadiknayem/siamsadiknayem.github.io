@@ -1,0 +1,78 @@
+{%- comment -%}
+  Materials library for one course.
+  File list  = _data/drive/<slug>.json   (synced from Google Drive)
+  Titles etc = _data/materials/<slug>.yml (edited by hand)
+{%- endcomment -%}
+{%- assign slug = include.slug -%}
+{%- assign m = site.data.materials[slug] -%}
+{%- assign d = site.data.drive[slug] -%}
+{%- assign files = d.files -%}
+{%- assign listed = "|" -%}
+{%- assign hidden = m.hidden | join: "|" | prepend: "|" | append: "|" -%}
+
+{%- if files == nil or files.size == 0 %}
+<p class="notice">Materials for this course will appear here soon.</p>
+{%- else %}
+
+{%- for g in m.groups %}
+<div class="lecture-group">
+  <h3>Part {{ forloop.index }} · {{ g.title }}</h3>
+  <ol class="lectures">
+    {%- for it in g.items %}
+    {%- assign f = files | where: "id", it.id | first %}
+    {%- assign listed = listed | append: it.id | append: "|" %}
+    {%- if f %}
+    {% include material-row.html f=f num=it.label title=it.title note=it.note %}
+    {%- endif %}
+    {%- endfor %}
+  </ol>
+</div>
+{%- endfor %}
+
+{%- if m.reading %}
+<div class="lecture-group">
+  <h3>Reading</h3>
+  <ol class="lectures">
+    {%- for it in m.reading %}
+    {%- assign f = files | where: "id", it.id | first %}
+    {%- assign listed = listed | append: it.id | append: "|" %}
+    {%- if f %}
+    {% include material-row.html f=f num="Notes" title=it.title note=it.note %}
+    {%- endif %}
+    {%- endfor %}
+  </ol>
+</div>
+{%- endif %}
+
+{%- comment -%} Anything in Drive not described above appears here automatically. {%- endcomment -%}
+{%- assign extra = 0 -%}
+{%- for f in files %}
+  {%- assign key = "|" | append: f.id | append: "|" %}
+  {%- unless listed contains key or hidden contains key %}{% assign extra = extra | plus: 1 %}{% endunless %}
+{%- endfor %}
+{%- if extra > 0 %}
+<div class="lecture-group">
+  <h3>Recently added</h3>
+  <ol class="lectures">
+    {%- for f in files %}
+    {%- assign key = "|" | append: f.id | append: "|" %}
+    {%- unless listed contains key or hidden contains key %}
+    {% include material-row.html f=f num="New" %}
+    {%- endunless %}
+    {%- endfor %}
+  </ol>
+</div>
+{%- endif %}
+
+{%- if m.credits %}
+<div class="credit">
+  <p><span class="label">Credits</span></p>
+  {%- for c in m.credits %}
+  <p>{{ c[1] }}</p>
+  {%- endfor %}
+  <p>These materials are shared for students' study. All rights remain with their authors.</p>
+</div>
+{%- endif %}
+
+<p class="tiny muted">List synced from Google Drive{% if d.synced %} · last checked {{ d.synced | date: "%-d %b %Y, %H:%M UTC" }}{% endif %} · <a href="https://drive.google.com/drive/folders/{{ d.folder }}" target="_blank" rel="noopener">Open the folder in Google Drive ↗</a></p>
+{%- endif %}

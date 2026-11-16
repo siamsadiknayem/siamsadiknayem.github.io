@@ -1,0 +1,40 @@
+---
+layout: page
+---
+{{ content }}
+<section class="section" aria-labelledby="h-lib" style="margin-top:48px">
+  <h2 class="section__label" id="h-lib"><span class="num">01</span>Course materials</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {%- for c in site.data.courses %}{% if c.page %}
+      {%- assign d = site.data.drive[c.slug] %}
+      <li>
+        <span class="when">{{ c.code }}</span>
+        <span class="what"><a href="{{ '/courses/' | append: c.slug | append: '/' | relative_url }}">{{ c.title }}</a><br><span class="small muted">{{ c.institution }} · {% if d.files %}{{ d.files.size }} files{% else %}materials coming soon{% endif %}</span></span>
+      </li>
+      {%- endif %}{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-all">
+  <h2 class="section__label" id="h-all"><span class="num">02</span>All courses</h2>
+  <div class="section__body">
+    <div class="table-scroll">
+      <table class="course-table">
+        <thead><tr><th scope="col" class="label">Code</th><th scope="col" class="label">Course</th><th scope="col" class="label">Type</th><th scope="col" class="label">Institution</th></tr></thead>
+        <tbody>
+          {%- for c in site.data.courses %}
+          <tr>
+            <td>{{ c.code }}</td>
+            <td>{% if c.page %}<a href="{{ '/courses/' | append: c.slug | append: '/' | relative_url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</td>
+            <td class="muted small">{{ c.kind }}</td>
+            <td class="muted small">{{ c.institution }}, {{ c.department | remove: "Department of " }}</td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="small secondary">{% for pos in site.data.profile.positions %}{{ pos.title }}, {{ pos.org }} (since {{ pos.since }}){% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+  </div>
+</section>

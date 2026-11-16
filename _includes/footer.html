@@ -1,0 +1,12 @@
+{%- assign p = site.data.profile -%}
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <ul>
+      <li><a href="{% include email-href.html %}" target="_blank" rel="noopener">{{ p.email }}</a></li>
+      {%- for l in p.links %}
+      <li><a href="{{ l.url }}" rel="me">{{ l.label }}</a></li>
+      {%- endfor %}
+    </ul>
+    <span class="mono tiny">Updated {{ site.time | date: "%b %Y" }}</span>
+  </div>
+</footer>

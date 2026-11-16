@@ -1,0 +1,63 @@
+# ---------------------------------------------------------------
+# Research content (homepage section 01 and the Research page).
+# Keep "completed", "under review" and "future" clearly separate.
+# ---------------------------------------------------------------
+
+featured:
+  title: Non-invasive glucose measurement with multispectral Vis-NIR spectroscopy
+  summary: >-
+    From sensor hardware to clinical validation: a low-cost transmittance system,
+    measured in vivo, with machine-learning models to estimate blood glucose.
+  problem: >-
+    Finger-prick glucometers remain the standard for diabetes care because
+    non-invasive alternatives are not yet reliable enough for everyday use.
+    Frequent pricking is painful, which discourages the regular measurement
+    that good glucose control depends on.
+  approach: >-
+    The work combines multispectral optical transmittance measurements at 650,
+    808 and 940 nm with machine learning. Simulation of light absorption in skin
+    layers and in vitro experiments were used to choose the wavelength; an in vivo
+    transmittance setup then collected measurements alongside clinical reference
+    values, and ensemble regression models were trained to predict glucose
+    concentration.
+  pipeline:
+    - label: Sensor
+      value: 650 · 808 · 940 nm
+      note: multispectral transmittance
+    - label: Data
+      value: 200 clinical samples
+      note: in vivo setup
+    - label: Model
+      value: XGBoost, R² = 0.94
+      note: RMSE 23.92 mg/dL
+    - label: Validation
+      value: 92.5% in Zone A
+      note: Clarke Error Grid, none in C–E
+  attribution: Results as reported in Paul, Nayem et al., <i>ACS Omega</i> 11(19), 2026.
+  outputs: Undergraduate thesis, KUET 2025 → IEEE QPAIN 2025, first author → <i>ACS Omega</i> 2026, co-author
+  collaborators: Prof. Md Rejvi Kaysir and Prof. Md. Jahirul Islam, Department of EEE, KUET, and the co-authors of each paper.
+  thesis: "Development of a Non-Invasive Glucose Monitoring System: Integrating VIS-NIR Spectroscopy and Optimized Machine Learning (B.Sc. thesis, KUET, 2025)"
+
+methods:
+  - Vis-NIR multispectral optical sensing
+  - In vivo transmittance measurement
+  - Machine learning for regression in Python (ensemble models)
+  - Embedded hardware and PCB design — Arduino, Raspberry Pi, EasyEDA
+  - MATLAB, Origin Pro, Proteus
+
+questions:
+  - "Making low-cost multispectral optics robust to differences between people: skin tone, tissue thickness, temperature"
+  - Miniaturising transmittance sensing into a wearable form
+  - Clinically reliable machine learning from small optical datasets
+
+interests:
+  - Biomedical optical sensing
+  - Wearable optical sensors
+  - ML for physiological signals
+  - Biomedical signal processing
+
+other_work:
+  - title: IoT-enabled UAV platform for patient health monitoring
+    status: Published · co-author, IEEE QPAIN 2026
+  - title: Machine-learning thyroid disease screening from laboratory features
+    status: Under review

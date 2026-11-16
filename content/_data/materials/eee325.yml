@@ -1,0 +1,44 @@
+# ---------------------------------------------------------------
+# EEE 325: how the files in the Google Drive folder are presented.
+# See _data/materials/eee237.yml for how this file works.
+# ---------------------------------------------------------------
+
+credits:
+  dspfirst: >-
+    Slides from DSP First, 2nd edition, © 2003–2016 J. H. McClellan and
+    R. W. Schafer, used under a Creative Commons BY-NC-SA 1.0 licence.
+  kuhn: >-
+    Digital Signal Processing lecture notes by Markus Kuhn, Computer Laboratory,
+    University of Cambridge (Lent 2011).
+
+groups:
+  - title: Sinusoids and complex numbers
+    items:
+      - { id: 17NIFQ1CS0AAYXFmpWl71WoxbLe72ayWD, label: Lecture 01, title: Sinusoids, type: slides, credit: dspfirst }
+      - { id: 1jRHhEsraDc8Mlr8zlYr0ZRJGAZlr_mcY, label: Lecture 02, title: "Phase and time shift; delay and attenuation", type: slides, credit: dspfirst }
+      - { id: 19svwugT_PyixVcNxe8tt9deMdAiU-uNq, label: Lecture 03, title: Complex exponentials and complex numbers, type: slides, credit: dspfirst }
+      - { id: 1YtcoC0DqMbM-vyouwgdvpJeF0JE372v9, label: Lecture 04, title: Phasor addition theorem, type: slides, credit: dspfirst }
+  - title: Spectrum and Fourier series
+    items:
+      - { id: 1w_AM9z_rf-DvWz1Ip3iIVX0nlxUWXl94, label: Lecture 05, title: Spectrum representation, type: slides, credit: dspfirst }
+      - { id: 1Ngt8AGngc5GR9zh6ccR-EoLH3SnifK2j, label: Lecture 05A, title: Operations on the spectrum, type: slides, credit: dspfirst }
+      - { id: 1fl8WvezP4HEh1EsDV3ehMOJ7cklpE6VK, label: Lecture 06, title: "Periodic signals, harmonics and time-varying sinusoids", type: slides, credit: dspfirst }
+      - { id: 1_JXqh95nOyBt_YIPP0OX6b4ltBAAQgMC, label: Lecture 07, title: Fourier series analysis, type: slides, credit: dspfirst }
+      - { id: 1Uy_2FTFrZ4F0lGAEaxBu7TBySSowxzHC, label: Lecture 08, title: Fourier series and spectrum, type: slides, credit: dspfirst }
+  - title: Sampling and reconstruction
+    items:
+      - { id: 1uglTkux3DCMnwUMknzqu3xgB9MpOIrDJ, label: Lecture 09, title: Sampling and aliasing, type: slides, credit: dspfirst }
+      - { id: 11TpwsME0Rl3kzapreaHyi2VOi9aF0W5h, label: Lecture 10, title: Digital-to-analog conversion, type: slides, credit: dspfirst }
+  - title: FIR filters and LTI systems
+    items:
+      - { id: 1cXIApVgF60Ta7o2Id85--IBrBOoCM0u_, label: Lecture 11, title: "FIR filtering: introduction", type: slides, credit: dspfirst }
+      - { id: 19Dr7ppUHiFd65DsXRz-s-Uu7z5DdM_jW, label: Lecture 12, title: "Linearity, time invariance and convolution", type: slides, credit: dspfirst }
+      - { id: 1ikG7A1Hymsq0krokQzkdh1lYmuoAckV9, label: Lecture 13, title: Frequency response of FIR filters, type: slides, credit: dspfirst }
+
+reading:
+  - id: 1qOy1vZVZPR5I25tTi9sgsCwcFY_amUfU
+    title: "Lecture notes: Digital Signal Processing (2-up slides)"
+    type: notes
+    credit: kuhn
+
+hidden: []
