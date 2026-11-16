@@ -100,7 +100,7 @@ or `bundle exec jekyll serve`. Posts with a future date are not built: that's th
 | Semester / "Diploma" | Removed from all courses on 16 Nov 2026 at Siam's request. Don't add either back |
 | Thyroid paper | Author list withheld. Show title + "Under review" only |
 | ACS Omega | Siam's specific contribution not yet provided. Draft article needs it |
-| Materials | EEE 237, EEE 325, CSE 1303, CSE 2203 and CSE 3205 have Drive folders and course pages (BU pages have no summary or syllabus yet; those sections are hidden until Siam provides them). EEE 326, EEE 220 and CSE 1301 have none |
+| Materials | EEE 237, EEE 325, CSE 1301, 1303, 2203 and 3205 have Drive folders and course pages. The four CSE pages carry the summary, syllabus, weekly lesson plan and references from Siam's course outlines (16 Nov 2026). EEE 326 and EEE 220 have none. Never publish the phone number or university email that appear in the outlines |
 | Cuff, Sundaram and Kuhn materials | Siam decided (16 Nov 2026) to keep them public, with author credits |
 
 ## When asked to make a change

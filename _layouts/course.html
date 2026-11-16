@@ -19,18 +19,22 @@ nav: teaching
   <p class="buttons">
     {%- if folder %}<a class="btn btn--primary" href="https://drive.google.com/drive/folders/{{ folder }}" target="_blank" rel="noopener">All materials (Google Drive) ↗</a>{% endif %}
     <a class="btn" href="#lectures">Lectures</a>
+    {%- if c.plan %}<a class="btn" href="#plan">Lesson plan</a>{% endif %}
     {%- if c.syllabus %}<a class="btn" href="#syllabus">Syllabus</a>{% endif %}
+    {%- if c.books or c.sites %}<a class="btn" href="#references">References</a>{% endif %}
   </p>
 </header>
 
 {%- assign n = 0 -%}
 {%- assign extra_notes = content | strip -%}
-{%- if c.summary or extra_notes != "" %}
+{%- if c.summary or c.methods or extra_notes != "" %}
 {%- assign n = n | plus: 1 %}
 <section class="section" id="about-course" aria-labelledby="h-about" style="margin-top:56px">
   <h2 class="section__label" id="h-about"><span class="num">0{{ n }}</span>About the course</h2>
   <div class="section__body">
     {%- if c.summary %}<p class="measure">{{ c.summary }}</p>{% endif %}
+    {%- if c.methods %}<p class="small measure"><span class="label">Teaching methods</span><br>{{ c.methods }}</p>{% endif %}
+    {%- if c.assessment %}<p class="small measure"><span class="label">Assessment</span><br>{{ c.assessment }}</p>{% endif %}
     {{ content }}
   </div>
 </section>
@@ -44,6 +48,24 @@ nav: teaching
   </div>
 </section>
 
+{%- if c.plan %}
+{%- assign n = n | plus: 1 %}
+<section class="section" id="plan" aria-labelledby="h-plan">
+  <h2 class="section__label" id="h-plan"><span class="num">0{{ n }}</span>Lesson plan</h2>
+  <div class="section__body">
+    <ol class="lectures">
+      {%- for w in c.plan %}
+      <li class="lecture">
+        <span class="lecture__num">Week {{ w.week }}</span>
+        <span class="lecture__body">{{ w.topics }}<span class="lecture__note">Lectures {{ w.lectures }}</span></span>
+        {%- if w.exam %}<span class="lecture__exam">{{ w.exam }} exam</span>{% endif %}
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+{%- endif %}
+
 {%- if c.syllabus %}
 {%- assign n = n | plus: 1 %}
 <section class="section" id="syllabus" aria-labelledby="h-syl">
@@ -55,10 +77,31 @@ nav: teaching
       <dd>{{ s.text }}</dd>
       {%- endfor %}
     </dl>
-    <p class="tiny muted">From the {{ c.institution }} course curriculum.</p>
+    <p class="tiny muted">{{ c.syllabus_note | default: "From the course curriculum." }}</p>
     {%- if c.related %}
     {%- assign rc = site.data.courses | where: "slug", c.related | first %}
     <p class="small">Related course: <a href="{{ '/courses/' | append: rc.slug | append: '/' | relative_url }}">{{ rc.code }} {{ rc.title }}</a> · Questions about the material: <a href="{% include email-href.html subject=c.code %}" target="_blank" rel="noopener">{{ site.data.profile.email }}</a></p>
+    {%- endif %}
+  </div>
+</section>
+{%- endif %}
+
+{%- if c.books or c.sites %}
+{%- assign n = n | plus: 1 %}
+<section class="section" id="references" aria-labelledby="h-ref">
+  <h2 class="section__label" id="h-ref"><span class="num">0{{ n }}</span>References</h2>
+  <div class="section__body">
+    {%- if c.books %}
+    <h3 class="small label">Books</h3>
+    <ul class="reflist">
+      {%- for b in c.books %}<li>{{ b }}</li>{% endfor %}
+    </ul>
+    {%- endif %}
+    {%- if c.sites %}
+    <h3 class="small label" style="margin-top:22px">Websites</h3>
+    <ul class="reflist">
+      {%- for w in c.sites %}<li><a href="{{ w.url }}" target="_blank" rel="noopener" aria-label="{{ w.label }} (opens in a new tab)">{{ w.label }} ↗</a></li>{% endfor %}
+    </ul>
     {%- endif %}
   </div>
 </section>

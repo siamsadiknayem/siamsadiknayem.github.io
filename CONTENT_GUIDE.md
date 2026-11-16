@@ -222,6 +222,8 @@ hidden: [1qOy1vZVZPR5I25tTi9sgsCwcFY_amUfU]
 
 The folder id is the code after `/folders/` in the folder's share link.
 
+Optional fields, each shown on the course page only when present: `credits`, `summary`, `methods` (teaching methods), `assessment`, `syllabus` (list of heading + text), `syllabus_note`, `plan` (weekly lesson plan: `week`, `lectures`, `topics`, `exam`), `books` (list of text) and `sites` (list of `label` + `url`). CSE 1301, 1303, 2203 and 3205 are filled in from the course outlines, so copy one of them as an example.
+
 **Step 2:** create `content/_pages/courses/eee326.md` with only this. Anything you write below the second `---` appears on the course page as extra notes for students.
 
 ```markdown

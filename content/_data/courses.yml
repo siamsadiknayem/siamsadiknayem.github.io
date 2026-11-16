@@ -116,6 +116,106 @@
   role: Lecturer
   page: true
   drive_folder: 1fIWaraMx7oNbp0NWQTfYAYbGgj5uN9aq
+  credits: 3 credits · 3 contact hours/week
+  summary: DC and AC circuit analysis, diode circuits, field-effect transistors and thyristors, amplifier
+    circuits and frequency response, feedback, and operational amplifiers.
+  methods: Lecture and discussion, co-operative and collaborative method, problem-based method.
+  assessment: Continuous assessment through class tests, quizzes, assignments and presentations, followed
+    by midterm and final examinations. The exam shown against each week is the one that covers it.
+  syllabus_note: From the course outline and lesson plan.
+  syllabus:
+  - heading: DC circuits
+    text: KVL, KCL, series and parallel circuits, three-phase circuit, Thevenin’s, Norton’s and superposition
+      theorems.
+  - heading: AC circuits
+    text: Sine wave, RLC circuit, phasor algebra, impedance, vector diagram.
+  - heading: Diode applications
+    text: Clipper circuit, clamper circuit, Zener diode, photodiode, light-emitting diode, liquid crystal
+      display.
+  - heading: Field-effect transistors and thyristors
+    text: FET construction, different configurations of JFET and characteristics, MOSFET construction
+      and characteristics, DC biasing of BJT and FET, SCR, DIAC and Triac.
+  - heading: Amplifier circuits
+    text: Classification of amplifiers, BJT small-signal CE amplifier with emitter bypass capacitor,
+      input and output coupling capacitors, frequency response, bandwidth and gain–bandwidth product,
+      design of a CE BJT amplifier, multistage amplifiers, RC, transformer and direct coupling, compound-pair
+      amplifiers.
+  - heading: Feedback amplifiers
+    text: Feedback concept, negative and positive feedback, effect of feedback, different types of negative
+      feedback amplifiers and their characteristics.
+  - heading: Operational amplifiers
+    text: 'Basic differential amplifier, common-mode rejection, ideal op-amp parameters, applications
+      of the op-amp: inverting and non-inverting amplifiers, unity-gain buffer, summing amplifier, active
+      filters.'
+  plan:
+  - week: 1
+    lectures: 1–2
+    topics: Basic electronic circuits, diode and transistor based DC circuit analysis, basic electricity.
+    exam: Midterm
+  - week: 2
+    lectures: 3–4
+    topics: Thevenin, Norton and superposition theorems, phasor algebra.
+    exam: Midterm
+  - week: 3
+    lectures: 5–6
+    topics: RLC circuit, vector diagram, clipper and clamper circuits.
+    exam: Midterm
+  - week: 4
+    lectures: 7–8
+    topics: 'Field-effect transistor (FET): FET construction, different configurations of JFET and characteristics.'
+    exam: Midterm
+  - week: 5
+    lectures: 9–10
+    topics: MOSFET construction and characteristics.
+    exam: Midterm
+  - week: 6
+    lectures: 11–12
+    topics: DC biasing of BJT and FET. SCR, DIAC and Triac.
+    exam: Midterm
+  - week: 7
+    lectures: 13–14
+    topics: 'Transistor equivalent circuits: generalized small-signal hybrid model of CE, CB and CC
+      amplifiers.'
+    exam: Final
+  - week: 8
+    lectures: 15–16
+    topics: 'Amplifier circuits: classification of amplifiers. BJT small-signal CE amplifier with emitter
+      bypass capacitor, input and output coupling capacitors.'
+    exam: Final
+  - week: 9
+    lectures: 17–18
+    topics: Frequency response of amplifiers, bandwidth and gain–bandwidth product.
+    exam: Final
+  - week: 10
+    lectures: 19–20
+    topics: Design of a CE BJT amplifier. Multistage amplifiers, RC, transformer and direct coupling,
+      compound-pair amplifiers.
+    exam: Final
+  - week: 11
+    lectures: 21–22
+    topics: 'Feedback amplifiers: feedback concept, negative and positive feedback, effect of feedback.'
+    exam: Final
+  - week: 12
+    lectures: 23–24
+    topics: Different types of negative feedback amplifiers and their characteristics.
+    exam: Final
+  - week: 13
+    lectures: 25–26
+    topics: 'Operational amplifier: basic differential amplifier, common-mode rejection, ideal op-amp
+      parameters, applications of the op-amp.'
+    exam: Final
+  - week: 14
+    lectures: 27–28
+    topics: Inverting and non-inverting amplifiers, unity-gain buffer, summing amplifier, active filters.
+  books:
+  - K. Lal Kishore, Electronic Devices and Circuits, BS Publications.
+  - V. K. Mehta and Rohit Mehta, Principles of Electronics.
+  - B. L. Theraja and A. K. Theraja, A Textbook of Electrical Technology, Volume IV.
+  sites:
+  - label: Electronics Notes
+    url: https://www.electronics-notes.com
+  - label: Electronics Tutorials
+    url: https://www.electronics-tutorials.ws
 
 - slug: cse3205
   code: CSE 3205
@@ -126,6 +226,110 @@
   role: Lecturer
   page: true
   drive_folder: 1TTvdlhcg0iRSErzwV44AQljeYpgcN91p
+  credits: 3 credits · 3 contact hours/week
+  summary: Logic families, counters and registers, programmable logic and memory, multivibrators and
+    the 555 timer, amplifier circuits, feedback, and operational amplifiers.
+  methods: Lecture and discussion, co-operative and collaborative method, problem-based method.
+  assessment: Continuous assessment through class tests, quizzes, assignments and presentations, followed
+    by midterm and final examinations. The exam shown against each week is the one that covers it.
+  syllabus_note: From the course outline and lesson plan.
+  syllabus:
+  - heading: Signals and systems
+    text: Analog and digital signals, system, advantages and disadvantages.
+  - heading: Logic families
+    text: Types, operating characteristics, diode–transistor logic (DTL), RTL, TTL, ECL; fan-out, noise
+      margin, propagation delay.
+  - heading: Counters and registers
+    text: Synchronous and asynchronous counters; SISO, SIPO, PISO, PIPO and up-down registers.
+  - heading: Programmable logic and memory
+    text: PLA, PAL, FPGA, ROM, RAM.
+  - heading: Multivibrators
+    text: Switching circuits, multivibrators, 555 timer, Schmitt trigger.
+  - heading: Amplifier circuits
+    text: Classification of amplifiers, BJT small-signal CE amplifier with emitter bypass capacitor,
+      input and output coupling capacitors, frequency response, bandwidth and gain–bandwidth product,
+      design of a CE BJT amplifier, multistage amplifiers, RC, transformer and direct coupling, compound-pair
+      amplifiers.
+  - heading: Feedback amplifiers
+    text: Feedback concept, negative and positive feedback, effect of feedback, different types of negative
+      feedback amplifiers and their characteristics.
+  - heading: Operational amplifiers
+    text: 'Basic differential amplifier, common-mode rejection, ideal op-amp parameters, applications
+      of the op-amp: inverting and non-inverting amplifiers, unity-gain buffer, summing amplifier, active
+      filters.'
+  plan:
+  - week: 1
+    lectures: 1–3
+    topics: 'Analog and digital signals, system, advantages and disadvantages. Logic families: types,
+      operating characteristics, DTL, RTL, TTL, ECL.'
+    exam: Midterm
+  - week: 2
+    lectures: 4–6
+    topics: 'TTL, ECL; fan-out, noise margin, propagation delay. Counters: synchronous and asynchronous
+      counters.'
+    exam: Midterm
+  - week: 3
+    lectures: 7–9
+    topics: 'Registers: SISO, SIPO, PISO, PIPO, up-down.'
+    exam: Midterm
+  - week: 4
+    lectures: 10–12
+    topics: 'Programmable logic: PLA, PAL, FPGA, ROM, RAM.'
+    exam: Midterm
+  - week: 5
+    lectures: 13–15
+    topics: 'Multivibrators: switching circuits, multivibrators, 555 timer, Schmitt trigger.'
+    exam: Midterm
+  - week: 6
+    lectures: 16–18
+    topics: 'Transistor equivalent circuits: generalized small-signal hybrid model of CE, CB and CC
+      amplifiers.'
+    exam: Midterm
+  - week: 7
+    lectures: 19–21
+    topics: 'Amplifier circuits: classification of amplifiers.'
+    exam: Final
+  - week: 8
+    lectures: 22–24
+    topics: BJT small-signal CE amplifier with emitter bypass capacitor, input and output coupling capacitors.
+    exam: Final
+  - week: 9
+    lectures: 25–27
+    topics: Frequency response of amplifiers, bandwidth and gain–bandwidth product.
+    exam: Final
+  - week: 10
+    lectures: 28–30
+    topics: Design of a CE BJT amplifier. Multistage amplifiers, RC, transformer and direct coupling,
+      compound-pair amplifiers.
+    exam: Final
+  - week: 11
+    lectures: 31–33
+    topics: 'Feedback amplifiers: feedback concept, negative and positive feedback, effect of feedback.'
+    exam: Final
+  - week: 12
+    lectures: 34–36
+    topics: Different types of negative feedback amplifiers and their characteristics.
+    exam: Final
+  - week: 13
+    lectures: 37–39
+    topics: 'Operational amplifier: basic differential amplifier, common-mode rejection, ideal op-amp
+      parameters, applications of the op-amp.'
+    exam: Final
+  - week: 14
+    lectures: 40–42
+    topics: Inverting and non-inverting amplifiers, unity-gain buffer, summing amplifier, active filters.
+  books:
+  - M. Morris Mano and Michael D. Ciletti, Digital Design.
+  - Thomas L. Floyd, Digital Fundamentals.
+  - V. K. Mehta and Rohit Mehta, Principles of Electronics.
+  - B. L. Theraja and A. K. Theraja, A Textbook of Electrical Technology, Volume IV.
+  - Robert L. Boylestad, Introductory Circuit Analysis.
+  - 'Thomas L. Floyd, Electronics Fundamentals: Circuits, Devices, and Applications.'
+  sites:
+  - label: Electronics Notes
+    url: https://www.electronics-notes.com
+  - label: Electronics Tutorials
+    url: https://www.electronics-tutorials.ws
 
 - slug: cse2203
   code: CSE 2203
@@ -136,6 +340,124 @@
   role: Lecturer
   page: true
   drive_folder: 13InlncTFQ2kLdxyU7UUntfffL2WZ7226
+  credits: 3 credits · 3 contact hours/week
+  summary: Microprocessor-based system design, memory devices, interrupts, microcontrollers, and the
+    Intel 8086 with assembly language programming.
+  methods: Lecture and discussion, co-operative and collaborative method, problem-based method.
+  assessment: Continuous assessment through class tests, quizzes, assignments and presentations, followed
+    by midterm and final examinations. The exam shown against each week is the one that covers it.
+  syllabus_note: From the course outline and lesson plan.
+  syllabus:
+  - heading: Microcomputer system
+    text: Microprocessors and microcomputers, evolution of microprocessors, microprocessor applications.
+  - heading: Microprocessor-based system design
+    text: Hardware and software interfacing in microcomputer system design, hardware and I/O design,
+      building, debugging, testing and linking program modules, programming EPROM.
+  - heading: Memory devices
+    text: Memory terminology, CPU–memory connections, ROM architectures and timing diagrams, different
+      types of ROM, flash memory, RAM architectures and timing diagrams, different types of RAM and
+      read/write cycle, programmable logic device architectures.
+  - heading: Interrupt system
+    text: Sources and types of interrupt, handling interrupt requests, interrupt vector and table, 8259A
+      priority interrupt controller, daisy chain.
+  - heading: Microcontrollers
+    text: Microcontroller basics, introduction to microcontroller architecture, operations, families,
+      the 8051 microcontroller.
+  - heading: Intel 8086 microprocessor
+    text: Internal architecture, register structure, programming model, addressing modes, instruction
+      set, assembly language programming, condition tests, branches, control structures, subroutines
+      and parameter passing, macros, I/O, control signals, I/O port organisation and access, the 8086
+      family of chips, interrupts and interrupt handling, coprocessors.
+  - heading: System design and other processors
+    text: System design using the 8086; overview of the Intel 80186, 80286, 80386, 80486 and Pentium;
+      RISC processors; 6800 and 68000 processors.
+  - heading: Multiprocessor configurations
+    text: Coprocessor configurations, numeric data processor, I/O processors.
+  - heading: Assembly language
+    text: Program structure and its components, basic instructions, input/output instructions.
+  - heading: Flag register and flow control
+    text: The flag register, flow control instructions, conditional and unconditional jumps, branching
+      and looping structures.
+  - heading: Logic and arithmetic operations
+    text: Logic, shift and rotate instructions, multiplication and division instructions.
+  plan:
+  - week: 1
+    lectures: 1–3
+    topics: 'Microcomputer system: microprocessors and microcomputers, evolution of microprocessors,
+      microprocessor applications.'
+    exam: Midterm
+  - week: 2
+    lectures: 4–6
+    topics: 'Microprocessor-based system design: hardware and software interfacing in microcomputer
+      system design, hardware and I/O design, building.'
+    exam: Midterm
+  - week: 3
+    lectures: 7–9
+    topics: Debugging, testing and linking program modules, programming EPROM.
+    exam: Midterm
+  - week: 4
+    lectures: 10–12
+    topics: 'Memory devices: memory terminology, CPU–memory connections, ROM architectures and timing
+      diagrams.'
+    exam: Midterm
+  - week: 5
+    lectures: 13–15
+    topics: Different types of ROM, flash memory, RAM architectures and timing diagrams, different types
+      of RAM and read/write cycle, programmable logic device architectures.
+    exam: Midterm
+  - week: 6
+    lectures: 16–18
+    topics: 'Interrupt system: sources and types of interrupt, handling interrupt requests, interrupt
+      vector and table, 8259A priority interrupt controller, daisy chain.'
+    exam: Midterm
+  - week: 7
+    lectures: 19–21
+    topics: 'Microcontrollers: basics, architecture, operations, families, the 8051 microcontroller.'
+    exam: Midterm
+  - week: 8
+    lectures: 22–24
+    topics: 'Intel 8086 microprocessor: internal architecture, register structure, programming model,
+      addressing modes, instruction set, assembly language programming, condition tests, branches, control
+      structures, subroutines and parameter passing.'
+    exam: Final
+  - week: 9
+    lectures: 25–27
+    topics: Macros, I/O, control signals, I/O port organisation and access, the 8086 family of chips,
+      interrupts and interrupt handling, coprocessors, system design using the 8086.
+    exam: Final
+  - week: 10
+    lectures: 28–30
+    topics: 'Overview of the Intel 80186, 80286, 80386, 80486 and Pentium; RISC processors; 6800 and
+      68000 processors. Multiprocessor configurations: coprocessor configurations, numeric data processor,
+      I/O processors.'
+    exam: Final
+  - week: 11
+    lectures: 31–33
+    topics: 'Introduction to assembly language: program structure and its components, basic instructions,
+      input/output instructions.'
+    exam: Final
+  - week: 12
+    lectures: 34–36
+    topics: 'Flag register and flow control: the flag register, flow control instructions, conditional
+      and unconditional jumps, branching and looping structures.'
+    exam: Final
+  - week: 13
+    lectures: 37–39
+    topics: 'Logic and arithmetic operations: logic, shift and rotate instructions, multiplication and
+      division instructions.'
+    exam: Final
+  - week: 14
+    lectures: 40–42
+    topics: Review of previous topics, problem solving, conclusion.
+    exam: Final
+  books:
+  - D. V. Hall, Microprocessors and Interfacing, McGraw-Hill.
+  - 'Barry B. Brey, The Intel Microprocessors: 8086/8088, 80186/80188, 80286, 80386, 80486, Pentium
+    and Pentium Pro Processor, Architecture, Programming, and Interfacing, Prentice-Hall.'
+  - Ytha Yu and Charles Marut, Assembly Language Programming and Organization of the IBM PC, McGraw-Hill.
+  sites:
+  - label: 'Javatpoint: Microprocessor'
+    url: https://www.javatpoint.com/microprocessor
 
 - slug: cse1301
   code: CSE 1301
@@ -144,4 +466,109 @@
   department: Department of CSE
   kind: Theory
   role: Lecturer
-  page: false
+  page: true
+  drive_folder: 1dGHBXfJMRvOimIZKWHUyVq-8_X8Cnn5q
+  credits: 3 credits · 3 contact hours/week
+  summary: Electricity and magnetism, electromagnetic induction, modern and nuclear physics, architectural
+    acoustics and the quantum theory of radiation.
+  methods: Lecture and discussion, co-operative and collaborative method, problem-based method.
+  assessment: Continuous assessment through class tests, quizzes, assignments and presentations, followed
+    by midterm and final examinations. The exam shown against each week is the one that covers it.
+  syllabus_note: From the course outline and lesson plan.
+  syllabus:
+  - heading: Electricity
+    text: Concept of electric charge, conductors and insulators, permittivity of a medium, Coulomb’s
+      law, Gauss’s law and its applications.
+  - heading: The electric field
+    text: Lines of force, electric flux, dipole in an electric field, electric potential, relation between
+      electric potential and electric field.
+  - heading: Capacitance
+    text: Calculation of capacitance, different types of capacitors, capacitors with dielectric, energy
+      storage in an electric field, charging and discharging of a capacitor, time constant.
+  - heading: Magnetism
+    text: Permeability of a medium, the magnetic field, Biot–Savart law, Ampere’s law, magnetic force
+      on a current, magnetic lines of induction, force between two parallel current-carrying conductors.
+  - heading: Electromagnetic induction
+    text: Faraday’s law, Lenz’s law, self and mutual induction, and transient response in an LR circuit.
+  - heading: Modern physics
+    text: Michelson–Morley experiment, Galilean transformation, special theory of relativity and its
+      consequences.
+  - heading: Nuclear physics
+    text: Properties of the nucleus, nuclear reactions, radioactive disintegration, fission, fusion,
+      chain reaction, nuclear reactor.
+  - heading: Architectural acoustics
+    text: Reverberation and Sabine’s formula.
+  - heading: Quantum theory of radiation
+    text: Photoelectric effect, Compton effect, wave–particle duality, interpretation of Bohr’s postulates.
+  plan:
+  - week: 1
+    lectures: 1–3
+    topics: 'Electricity: concept of electric charge, conductors and insulators, permittivity of a medium.'
+    exam: Midterm
+  - week: 2
+    lectures: 4–6
+    topics: Coulomb’s law, Gauss’s law, applications of Gauss’s law.
+    exam: Midterm
+  - week: 3
+    lectures: 7–9
+    topics: 'The electric field: lines of force, electric flux, dipole in an electric field.'
+    exam: Midterm
+  - week: 4
+    lectures: 10–12
+    topics: Electric potential, relation between electric potential and electric field.
+    exam: Midterm
+  - week: 5
+    lectures: 13–15
+    topics: 'Capacitance: calculation of capacitance, different types of capacitors, capacitors with
+      dielectric.'
+    exam: Midterm
+  - week: 6
+    lectures: 16–18
+    topics: Energy storage in the electric field of a capacitor, charging and discharging of a capacitor,
+      time constant.
+    exam: Midterm
+  - week: 7
+    lectures: 19–21
+    topics: 'Magnetism: permeability of a medium, the magnetic field, Biot–Savart law.'
+    exam: Midterm
+  - week: 8
+    lectures: 22–24
+    topics: Ampere’s law, magnetic force on a current, magnetic lines of induction, force between two
+      parallel current-carrying conductors.
+    exam: Final
+  - week: 9
+    lectures: 25–27
+    topics: 'Electromagnetic induction: Faraday’s law, Lenz’s law, self and mutual induction, transient
+      response in an LR circuit.'
+    exam: Final
+  - week: 10
+    lectures: 28–30
+    topics: 'Modern physics: Michelson–Morley experiment, Galilean transformation, special theory of
+      relativity and its consequences.'
+    exam: Final
+  - week: 11
+    lectures: 31–33
+    topics: 'Nuclear physics: properties of the nucleus, nuclear reactions, radioactive disintegration.'
+    exam: Final
+  - week: 12
+    lectures: 34–36
+    topics: Fission, fusion, chain reaction, nuclear reactor. Architectural acoustics, reverberation
+      and Sabine’s formula.
+    exam: Final
+  - week: 13
+    lectures: 37–39
+    topics: 'Quantum theory of radiation: photoelectric effect, Compton effect, wave–particle duality,
+      interpretation of Bohr’s postulates.'
+    exam: Final
+  - week: 14
+    lectures: 40–42
+    topics: Review of previous topics, problem solving, conclusion.
+    exam: Final
+  books:
+  - D. Halliday, R. Resnick and J. Walker, Fundamentals of Physics, 11th ed., Wiley, 2018.
+  - A. Beiser, Perspectives of Modern Physics, 6th ed., McGraw-Hill, 2002.
+  sites:
+  - label: 'Numerade: Nuclear Physics chapter'
+    url: https://www.numerade.com/books/chapter/nuclear-physics-16/
+  - label: YouTube playlist
+    url: https://www.youtube.com/watch?v=H0m97YJavH4&list=PLybg94GvOJ9FAFBqQGf5-4YbfKpWbJtGn
