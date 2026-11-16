@@ -97,10 +97,10 @@ or `bundle exec jekyll serve`. Posts with a future date are not built: that's th
 |---|---|
 | GitHub | Repository `siamsadiknayem/siamsadiknayem.github.io` (user site) · live at https://siamsadiknayem.github.io · `baseurl: ""` |
 | Public CV PDF | Published 16 Nov 2026 from Siam_Sadik_Nayem_CV_Public.docx. The SEU line was corrected to "Adjunct Lecturer" in the PDF; Siam will update his source .docx |
-| Semester names | Unconfirmed for all courses (`semester: ""`) |
+| Semester / "Diploma" | Removed from all courses on 16 Nov 2026 at Siam's request. Don't add either back |
 | Thyroid paper | Author list withheld. Show title + "Under review" only |
 | ACS Omega | Siam's specific contribution not yet provided. Draft article needs it |
-| Materials | Only EEE 237 and EEE 325 have Drive folders. EEE 326, EEE 220 and the BU courses have none |
+| Materials | EEE 237, EEE 325, CSE 1303, CSE 2203 and CSE 3205 have Drive folders and course pages (BU pages have no summary or syllabus yet; those sections are hidden until Siam provides them). EEE 326, EEE 220 and CSE 1301 have none |
 | Cuff, Sundaram and Kuhn materials | Siam decided (16 Nov 2026) to keep them public, with author credits |
 
 ## When asked to make a change

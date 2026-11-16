@@ -10,8 +10,7 @@ excerpt: >-
 DRAFT — written by Claude. Before publishing:
   1. Add a sentence or two in your own voice about teaching these courses
      (what students find hard, what you emphasise).
-  2. Add the semester name if you want it shown.
-  3. Move this file to _posts/ as YYYY-MM-DD-signals-dsp-materials-seu.md
+  2. Move this file to _posts/ as YYYY-MM-DD-signals-dsp-materials-seu.md
 -->
 
 Since July 2026 I have been teaching two connected courses as an Adjunct Lecturer in the Department of EEE at Southeast University: **EEE 237 Continuous Signals and Linear Systems** and **EEE 325 Digital Signal Processing I**, along with the DSP laboratory (EEE 326).

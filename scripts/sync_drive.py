@@ -133,6 +133,8 @@ def main():
     problems = 0
     for c in courses:
         folder = (c.get("drive_folder") or "").strip()
+        m = re.search(r"/folders/([A-Za-z0-9_-]+)", folder)
+        folder = m.group(1) if m else folder  # accept a pasted share link too
         if not folder:
             continue
         slug = c["slug"]

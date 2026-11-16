@@ -209,14 +209,13 @@ hidden: [1qOy1vZVZPR5I25tTi9sgsCwcFY_amUfU]
   title: Digital Signal Processing I Laboratory
   institution: Southeast University
   department: Department of EEE
-  programme: B.Sc. in EEE (Diploma Students)
+  programme: B.Sc. in EEE
   kind: Lab
-  semester: ""
   role: Adjunct Lecturer
   page: true
   drive_folder: PASTE_FOLDER_ID
-  summary: One or two sentences describing the course.
-  syllabus:
+  summary: One or two sentences describing the course.   # optional
+  syllabus:                                               # optional
     - heading: Experiments
       text: Short description from the curriculum.
 ```

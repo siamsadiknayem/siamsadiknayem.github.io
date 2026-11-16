@@ -5,7 +5,6 @@
 #   page: true   course has its own page with a materials library
 #   drive_folder the Google Drive folder ID (the part after /folders/ in the
 #                share link). The site lists that folder automatically.
-#   semester     leave "" until confirmed
 # ---------------------------------------------------------------
 
 - slug: eee237
@@ -13,10 +12,9 @@
   title: Continuous Signals and Linear Systems
   institution: Southeast University
   department: Department of EEE
-  programme: B.Sc. in EEE (Diploma Students)
+  programme: B.Sc. in EEE
   kind: Theory
   credits: 3 credits · 3 hours/week
-  semester: ""
   role: Adjunct Lecturer
   page: true
   drive_folder: 12MrH8YEd6o_FpMLfXLqkxFwHZ9qcA9_F
@@ -57,10 +55,9 @@
   title: Digital Signal Processing I
   institution: Southeast University
   department: Department of EEE
-  programme: B.Sc. in EEE (Diploma Students)
+  programme: B.Sc. in EEE
   kind: Theory
   credits: 3 credits · 3 hours/week
-  semester: ""
   role: Adjunct Lecturer
   page: true
   drive_folder: 1EiPscwm8ALYOc_ZI1viMxrOFKzEhqSPA
@@ -95,9 +92,8 @@
   title: Digital Signal Processing I Laboratory
   institution: Southeast University
   department: Department of EEE
-  programme: B.Sc. in EEE (Diploma Students)
+  programme: B.Sc. in EEE
   kind: Lab
-  semester: ""
   role: Adjunct Lecturer
   page: false
 
@@ -106,9 +102,8 @@
   title: Electrical and Electronic Circuit Simulation Laboratory
   institution: Southeast University
   department: Department of EEE
-  programme: B.Sc. in EEE (Diploma Students)
+  programme: B.Sc. in EEE
   kind: Lab
-  semester: ""
   role: Adjunct Lecturer
   page: false
 
@@ -118,9 +113,9 @@
   institution: Bangladesh University
   department: Department of CSE
   kind: Theory
-  semester: ""
   role: Lecturer
-  page: false
+  page: true
+  drive_folder: 1fIWaraMx7oNbp0NWQTfYAYbGgj5uN9aq
 
 - slug: cse3205
   code: CSE 3205
@@ -128,9 +123,9 @@
   institution: Bangladesh University
   department: Department of CSE
   kind: Theory
-  semester: ""
   role: Lecturer
-  page: false
+  page: true
+  drive_folder: 1TTvdlhcg0iRSErzwV44AQljeYpgcN91p
 
 - slug: cse2203
   code: CSE 2203
@@ -138,9 +133,9 @@
   institution: Bangladesh University
   department: Department of CSE
   kind: Theory
-  semester: ""
   role: Lecturer
-  page: false
+  page: true
+  drive_folder: 13InlncTFQ2kLdxyU7UUntfffL2WZ7226
 
 - slug: cse1301
   code: CSE 1301
@@ -148,6 +143,5 @@
   institution: Bangladesh University
   department: Department of CSE
   kind: Theory
-  semester: ""
   role: Lecturer
   page: false

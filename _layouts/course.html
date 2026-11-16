@@ -4,6 +4,7 @@ nav: teaching
 ---
 {%- assign c = site.data.courses | where: "slug", page.course | first -%}
 {%- assign d = site.data.drive[c.slug] -%}
+{%- assign folder = d.folder | default: c.drive_folder -%}
 <p class="breadcrumb"><a href="{{ '/teaching/' | relative_url }}">Teaching</a> / {{ c.institution }} / {{ c.code }}</p>
 
 <header style="margin-top:28px">
@@ -13,33 +14,40 @@ nav: teaching
     <div><dt class="label">Institution</dt><dd>{{ c.institution }}, {{ c.department | replace: "Department of ", "Dept. of " }}</dd></div>
     {%- if c.programme %}<div><dt class="label">Programme</dt><dd>{{ c.programme }}</dd></div>{% endif %}
     {%- if c.credits %}<div><dt class="label">Load</dt><dd>{{ c.credits }}</dd></div>{% endif %}
-    {%- if c.semester != "" and c.semester %}<div><dt class="label">Semester</dt><dd>{{ c.semester }}</dd></div>{% endif %}
     <div><dt class="label">Instructor</dt><dd>{{ site.data.profile.name }}, {{ c.role }}</dd></div>
   </dl>
   <p class="buttons">
-    {%- if d.folder %}<a class="btn btn--primary" href="https://drive.google.com/drive/folders/{{ d.folder }}" target="_blank" rel="noopener">All materials (Google Drive) ↗</a>{% endif %}
+    {%- if folder %}<a class="btn btn--primary" href="https://drive.google.com/drive/folders/{{ folder }}" target="_blank" rel="noopener">All materials (Google Drive) ↗</a>{% endif %}
     <a class="btn" href="#lectures">Lectures</a>
-    <a class="btn" href="#syllabus">Syllabus</a>
+    {%- if c.syllabus %}<a class="btn" href="#syllabus">Syllabus</a>{% endif %}
   </p>
 </header>
 
+{%- assign n = 0 -%}
+{%- assign extra_notes = content | strip -%}
+{%- if c.summary or extra_notes != "" %}
+{%- assign n = n | plus: 1 %}
 <section class="section" id="about-course" aria-labelledby="h-about" style="margin-top:56px">
-  <h2 class="section__label" id="h-about"><span class="num">01</span>About the course</h2>
+  <h2 class="section__label" id="h-about"><span class="num">0{{ n }}</span>About the course</h2>
   <div class="section__body">
-    <p class="measure">{{ c.summary }}</p>
+    {%- if c.summary %}<p class="measure">{{ c.summary }}</p>{% endif %}
     {{ content }}
   </div>
 </section>
+{%- endif %}
 
+{%- assign n = n | plus: 1 %}
 <section class="section" id="lectures" aria-labelledby="h-lec">
-  <h2 class="section__label" id="h-lec"><span class="num">02</span>Lectures</h2>
+  <h2 class="section__label" id="h-lec"><span class="num">0{{ n }}</span>Lectures</h2>
   <div class="section__body">
     {% include course-materials.html slug=c.slug %}
   </div>
 </section>
 
+{%- if c.syllabus %}
+{%- assign n = n | plus: 1 %}
 <section class="section" id="syllabus" aria-labelledby="h-syl">
-  <h2 class="section__label" id="h-syl"><span class="num">03</span>Syllabus</h2>
+  <h2 class="section__label" id="h-syl"><span class="num">0{{ n }}</span>Syllabus</h2>
   <div class="section__body">
     <dl class="syllabus">
       {%- for s in c.syllabus %}
@@ -54,3 +62,4 @@ nav: teaching
     {%- endif %}
   </div>
 </section>
+{%- endif %}
