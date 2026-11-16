@@ -5,21 +5,23 @@
 
 name: Siam Sadik Nayem
 short_name: S. S. Nayem
-photo: /files/images/siam.jpg   # upload a new photo to files/images/
+photo: /files/images/siam_squarephoto.png   # upload a new photo to files/images/
 photo_alt: Portrait of Siam Sadik Nayem
 
 # One sentence under your name on the homepage
 statement: >-
-  My research uses near-infrared light and machine learning to measure blood
-  glucose without a needle.
+  What if light could help us monitor blood glucose without a needle?
 
 # Homepage paragraph (first person)
 intro: >-
-  I completed my B.Sc. in Electrical and Electronic Engineering at KUET in 2025,
-  where this work began as my undergraduate thesis. It has since led to a
-  first-author IEEE conference paper and a co-authored article in *ACS Omega*.
-  I now teach signals, digital signal processing and electronics at two
-  renowned universities in Bangladesh.
+  Let's explore that possibility through research, innovation, and engineering. My work introduces how near-infrared sensing 
+  and machine learning can work together to make health monitoring simpler and less invasive. My journey into this field began 
+  at KUET, where I completed my B.Sc. in Electrical and Electronic Engineering in 2025. Since then, this work has led to IEEE 
+  conference papers and a Q1 journal. Beyond research, I teach signals, digital signal processing, and electronics at two 
+  universities in Bangladesh. 
+
+  I find equal fulfillment in exploring new ideas and helping students develop the confidence to explore them for themselves.
+  
 
 seeking_line: I am seeking PhD opportunities in biomedical optics and sensing.
 seeking_short: PhD position · biomedical optics, optical sensing, ML for health monitoring
