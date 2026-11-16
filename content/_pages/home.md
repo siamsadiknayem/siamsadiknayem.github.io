@@ -2,6 +2,8 @@
 # Homepage. Most homepage text comes from content/_data/profile.yml,
 # research.yml, publications.yml, leadership.yml and news.yml.
 layout: home
+seo:
+  type: Person
 permalink: /
 title: Siam Sadik Nayem
 description: Lecturer in Dhaka. Research in biomedical optical sensing — near-infrared spectroscopy and machine learning for non-invasive blood glucose measurement. Seeking PhD opportunities.

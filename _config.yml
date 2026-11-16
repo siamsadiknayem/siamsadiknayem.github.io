@@ -11,6 +11,22 @@ description: >-
   Lecturer in Dhaka. Research in biomedical optical sensing: near-infrared
   spectroscopy and machine learning for non-invasive blood glucose measurement.
 author: Siam Sadik Nayem
+tagline: Lecturer, Bangladesh University and Southeast University · Biomedical optical sensing
+
+# Search engines. Profiles listed here are linked to this site in Google's
+# structured data ("sameAs"), which helps Google connect them to your name.
+social:
+  name: Siam Sadik Nayem
+  links:
+    - https://www.linkedin.com/in/siam-sadik-nayem/
+    - https://scholar.google.com/citations?user=c8YqMrMAAAAJ
+    - https://www.researchgate.net/profile/Siam-Sadik
+    - https://github.com/siamsadiknayem
+
+# Google Search Console: paste only the code from the "HTML tag" method
+# (the part inside content="..."), then click Verify in Search Console.
+# webmaster_verifications:
+#   google: PASTE_CODE_HERE
 lang: en
 timezone: Asia/Dhaka
 

@@ -469,3 +469,17 @@ Visitors who use Gmail in their browser get a ready-to-send message. Visitors wi
 
 The address comes from `email:` in `content/_data/profile.yml`.
 
+
+
+---
+
+## 19. Get the site into Google Search
+
+Google finds new sites by itself, but slowly (days to weeks). To speed it up:
+
+1. Open https://search.google.com/search-console and choose **Add property → URL prefix**: `https://siamsadiknayem.github.io/`.
+2. Choose the **HTML tag** method. Copy only the code inside `content="..."`.
+3. In `_config.yml`, remove the `# ` in front of the two `webmaster_verifications` lines and paste the code in place of `PASTE_CODE_HERE`. Commit, wait about 2 minutes, then click **Verify**.
+4. In Search Console → **Sitemaps**, submit `sitemap.xml`.
+5. In **URL inspection**, paste the homepage address and click **Request indexing**.
+6. Link the site from your profiles: LinkedIn (Contact info → Website), Google Scholar (Edit → Homepage), ResearchGate and GitHub (profile → Website). Each link helps Google find and trust the site.
