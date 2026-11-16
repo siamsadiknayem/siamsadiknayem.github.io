@@ -25,8 +25,8 @@ social:
 
 # Google Search Console: paste only the code from the "HTML tag" method
 # (the part inside content="..."), then click Verify in Search Console.
-# webmaster_verifications:
-#   google: PASTE_CODE_HERE
+webmaster_verifications:
+  google: nuiwLS9kO3XdscG8MDf5LjqLRJP7LUls7OhE1l9R4VE
 lang: en
 timezone: Asia/Dhaka
 
