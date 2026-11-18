@@ -16,7 +16,7 @@ It is a Jekyll site published by GitHub Actions to GitHub Pages. Read this file 
 5. **Keep these off the website:**
    - Siam's choices: Education wording is "Dean's Award Recipient for academic excellence (4 Consecutive Years)" (16 Nov 2026). CGPA (removed from the homepage on 16 Nov 2026; don't add it back anywhere public without asking).
    - Private details: phone number, street address, referees' contact details, NID/passport, transcripts.
-   - The HulkenStein editorial work, "prompt engineering", French, and the one-day industrial visit.
+   - The HulkenStein editorial work, "prompt engineering" and French. (The IEEE KUET SB industrial visit, 20 Sep 2025, is now allowed: Siam added it as a gallery album on 18 Nov 2026.)
 6. **Approved public contact:** `siamsadik202@gmail.com`, plus the profile links in `content/_data/profile.yml`.
 7. **Course materials by other authors must keep their credit.** This applies to DSP First (McClellan & Schafer, CC BY-NC-SA), Paul Cuff's Princeton ELE 301, Shreyas Sundaram's Purdue ECE 301 notes and Markus Kuhn's Cambridge DSP notes. Never present them as Siam's own work.
 8. **University names:** use "Southeast University" (official spelling, decided 16 Nov 2026) and "Adjunct Lecturer" for the SEU role.
